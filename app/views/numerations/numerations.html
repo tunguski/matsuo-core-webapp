@@ -1,0 +1,34 @@
+
+
+<div ng-controller="NumerationsController">
+
+  <div class="row">
+    <div class="span12">
+      <h4>Lista numeracji</h4>
+
+      <div simple-search query="query"></div>
+
+      <table class="table table-condensed table-hover table-striped input-table">
+        <thead>
+          <tr>
+            <th>Kod</th>
+            <th>Wzorzec</th>
+            <th>Aktualna wartość</th>
+            <th>Maksymalna wartość</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="numeration in numerations | filter:query">
+            <td>{{numeration.code}}</td>
+            <td class="monospace">{{numeration.pattern}}</td>
+            <td>{{numeration.value}}</td>
+            <td>{{numeration.maxValue}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+

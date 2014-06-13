@@ -1,0 +1,78 @@
+
+.form-horizontal .control-group {
+  margin-bottom: 5px;
+}
+
+.form-horizontal .control-label {
+  padding-top: 4px;
+}
+
+body .modal.fullscreen {
+  /* new custom width */
+  width: 60%;
+  /* must be half of the width, minus scrollbar on the left (30px) */
+  margin-left: -30%;
+}
+
+body .modal.wider {
+  /* new custom width */
+  width: 44%;
+  /* must be half of the width, minus scrollbar on the left (30px) */
+  margin-left: -22%;
+}
+
+/** Wyśrodkowanie ikon względem linii tekstu formularza */
+.form-inline i[class^="icon-"],
+.form-inline i[class*=" icon-"],
+.form-inline a[class^="icon-"],
+.form-inline a[class*=" icon-"]{
+  vertical-align: middle;
+}
+
+.modal > .modal-body {
+  max-height: inherit;
+}
+
+.modal > .modal-header > h4:FIRST-CHILD {
+  margin-top: 5px;
+}
+
+.nav-pills > li > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  color: #999;
+  margin-left: 10px;
+  font-size: 110%;
+  display: inline;
+}
+
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+  color: inherit;
+  margin-left: inherit;
+  font-size: inherit;
+  display: inherit;
+}
+
+[class^="icon-"]:hover, [class*=" icon-"]:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-tabs > li > a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-content {
+  overflow: visible;
+}
+
+.nav, .pagination, .carousel a {
+  cursor: pointer;
+}
+

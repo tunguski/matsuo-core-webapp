@@ -1,0 +1,18 @@
+<div>
+  <div class="modal-header">
+    <h4>Edycja użytkownika</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-horizontal">
+      <div mt-form-part="pl.matsuo.core.model.user.User">
+        <div mt-form-field="username" />
+        <div mt-form-field="person.firstName" />
+        <div mt-form-field="person.lastName" />
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn cancel" ng-click="close()">{{ 'cancel' | translate }}</button>
+    <button class="btn btn-primary save" ng-click="save()">{{ 'save' | translate }}</button>
+  </div>
+</div>

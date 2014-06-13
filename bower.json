@@ -1,19 +1,29 @@
 {
   "name": "matsuo-core-webapp",
   "version": "0.1.0",
+  "authors": [
+    "Marek Romanowski <marek.romanowski@gmail.com>"
+  ],
+  "description": "Matsuo IT base web app",
+  "keywords": [
+    ""
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "sample"
+  ],
   "dependencies": {
-    "underscore": "latest",
-    "angular": ">=1.2.0",
     "json3": ">=3.2.6",
     "es5-shim": ">=2.1.0",
-    "jquery": "~1.11.0",
-    "bootstrap": ">=3.1.1",
-    "angular-resource": ">=1.2.0",
-    "angular-sanitize": ">=1.2.0",
-    "angular-route": ">=1.2.0"
+    "matsuo-ng-ui": ">=0.1.0",
+    "toastr": "~2.0.3"
   },
   "devDependencies": {
-    "angular-mocks": ">=1.2.0",
-    "angular-scenario": ">=1.2.0"
+    "angular-mocks": ">=1.2.0"
   }
 }

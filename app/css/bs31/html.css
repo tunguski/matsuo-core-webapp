@@ -1,0 +1,99 @@
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"],
+input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"],
+input[type="week"], input[type="number"], input[type="email"], input[type="url"],
+input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  padding: 2px 6px;
+}
+
+html {
+  background-color: whiteSmoke;
+}
+
+body {
+  font-family: 'open sans', sans-serif;
+}
+
+input, button, select, textarea {
+  font-family: 'open sans', sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+header {
+  margin-top: 50px;
+  padding-top: 0;
+  background-color: whiteSmoke;
+  background-image: linear-gradient(to bottom, #eee, #fafafa);
+  padding-bottom: 0;
+  border-bottom: 1px solid #DDD;
+  box-shadow: 0 3px 7px 0 rgba(10, 10, 10, .3);
+}
+
+header > div.container {
+  padding: 6px;
+  padding-top: 7px;
+}
+
+header h3 > * {
+  margin-right: 10px;
+}
+
+footer {
+  line-height: 30px;
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  border-top: 1px solid #DDD;
+  background-color: whiteSmoke;
+  color: #999;
+  box-shadow: 0 -3px 5px 0 rgba(10, 10, 10, .1);
+}
+
+footer > * {
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer li {
+  display: inline;
+}
+
+header h3, header h4 {
+  display: inline-block;
+}
+
+select {
+  height: 26px;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+}
+
+
+/* zmiany wyglądu modali */
+
+div.modal {
+  border-radius: 0;
+}
+
+div.modal .modal-header {
+  border-bottom: 0;
+}
+
+div.modal .modal-header h3 {
+  margin: 5px 0;
+  font-size: 17.5px;
+  line-height: 20px;
+}
+
+div.modal .modal-footer {
+  padding: 10px;
+}
+

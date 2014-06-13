@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="mt.ui">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../app/css/external/bootstrap-2.3/bootstrap.css">
+    <link rel="stylesheet" href="../app/css/external/bootstrap-2.3/bootstrap-responsive.css">
+    <link rel="stylesheet" href="../app/css/external/bootstrap-2.3/bootstrap-timepicker.css">
+    <link rel="stylesheet" href="../app/css/external/font-awesome.css">
+    <link rel="stylesheet" href="../app/css/external/fullcalendar.css">
+    <link rel="stylesheet" href="../app/css/external/json-prettyprint.css">
+    <link rel="stylesheet" href="../app/css/external/toastr.css" />
+    <link rel="stylesheet" href="../app/css/external/select2.css" />
+    <link rel="stylesheet" href="../app/css/bs23/html.css">
+    <link rel="stylesheet" href="../app/css/bs23/bootstrap-modifications.css">
+    <link rel="stylesheet" href="../app/css/bs23/key-like.css">
+    <link rel="stylesheet" href="../app/css/bs23/matsuo-core.css">
+
+    <title ng-bind-html="title">Matsuo-Core App</title>
+  </head>
+
+  <body ng-controller="AppController">
+
+    <!-- top menu -->
+    <div ng-show="isLoggedIn()" role="navigation"
+         class="navbar navbar-inverse navbar-fixed-top slide-with-page hidden-on-startup">
+      <div class="nav-collapse collapse" ng-include="'/views/base/page/menu.jsp'">
+      </div>
+    </div>
+
+    <!-- page title -->
+    <header id="overview" ng-show="isLoggedIn()" ng-controller="HeaderController" class="jumbotron subhead hidden-on-startup">
+      <div class="container relative">
+        <a href="javascript:;" onclick="window.history.back()" class="icon-reply back-link"></a>
+        <h3 ng-bind-html="title"></h3>
+        <a class="icon-info-sign help-icon" data-toggle="modal" ng-click="showHelp()"></a>
+      </div>
+    </header>
+
+    <!-- login view -->
+    <div ng-show="isLoggedOff()" class="container login-panel" ng-include="'/views/login/login.jsp'">
+    </div>
+
+    <!-- main panel (message panel + content panel) -->
+    <div ng-show="isLoggedIn()" class="container hidden-on-startup">
+      <section class="message-panel"></section>
+      <section class="main-panel" ng-view></section>
+    </div>
+
+    <!-- logs helper box -->
+    <div id="logBox"></div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Apache License 2.0 <br/>
+           Created by Matuo IT 2012 - {{actualYear}}</p>
+        <p class="icons">
+          <a class="icon-google-plus"></a>
+          <a class="icon-twitter"></a>
+          <a class="icon-facebook"></a>
+          <br/>
+          <a class="icon-noicon company-title">Matsuo IT</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- jquery -->
+    <script src="../app/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../app/bower_components/select2/select2.js"></script>
+
+    <!-- other -->
+    <script src="../app/bower_components/underscore/underscore.js"></script>
+    <script src="../app/bower_components/toastr/toastr.js"></script>
+    <script src="../app/bower_components/moment/moment.js"></script>
+    <script src="../app/bower_components/moment/lang/pl.js"></script>
+    <script src="../app/bower_components/matsuo-js-util/matsuo-js-util.js"></script>
+
+    <!-- angular -->
+    <script src="../app/bower_components/angular/angular.js"></script>
+    <script src="../app/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../app/bower_components/angular-route/angular-route.js"></script>
+    <script src="../app/bower_components/angular-translate/angular-translate.js"></script>
+    <script src="../app/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
+    <script src="../app/bower_components/angular-ui-select2/src/select2.js"></script>
+
+    <!-- own -->
+    <script src="../app/bower_components/matsuo-ng-route/matsuo-ng-route.js"></script>
+    <script src="../app/bower_components/matsuo-ng-resource/matsuo-ng-resource.js"></script>
+
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/backbone.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/ui.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/permissions.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/validation.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/dialog-service.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/basic-format-elements-directive.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/download-button-directive.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/form-element-directive.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/info-table-directive.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/focus-directive.js"></script>
+    <script src="../app/bower_components/matsuo-ng-ui/app/js/mt.ui/search-directive.js"></script>
+
+    <script src="js/matsuo-test.configuration.js"></script>
+
+    <script src="../app/js/base/user_info_panel.js"></script>
+    <script src="../app/js/base/users/users.js"></script>
+
+    <script type="text/javascript">
+      angular.module('mt.route').config(function (mtRouteConfig) {
+        mtRouteConfig.base_app_location = location.pathname;
+      });
+    </script>
+  </body>
+</html>

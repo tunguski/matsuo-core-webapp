@@ -1,0 +1,952 @@
+
+.login-panel {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.company-jumbo {
+  font-size: 64px;
+  line-height: 100px;
+}
+
+.login-panel .control-group {
+  margin-top: 30px;
+}
+
+.login-panel .remind-password {
+  margin-left: 20px;
+}
+
+.hidden-on-startup {
+  display: none;
+  visibility: hidden;
+}
+
+.login-credentials-info {
+  margin-bottom: 10px;
+  color: grey;
+}
+
+
+.message-panel {
+  padding-top: 20px;
+  padding-bottom: 0;
+  display: none;
+}
+
+.message-panel .alert {
+  margin-bottom: 0;
+}
+
+.main-panel {
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 5px 1px rgba(10, 10, 10, .2);
+}
+
+.appointment_info {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.appointment_info:hover {
+  border-color: #bbb;
+  background-color: #f9f9f9;
+}
+
+.appointment_info_done, .scheduleToday-CLOSED {
+  background-color: #E0FFC1 !important;
+}
+
+.appointment_info.scheduleToday-NOT_ARRIVED {
+  background-color: #FFA07A;
+}
+
+.appointment_info .date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.appointment_info .actions {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.appointment_history {
+  position: relative;
+}
+
+.appointment_history .status {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.history_displayed, .scheduleToday-AWAITING {
+  background-color: #FFFFCC !important;
+}
+
+.patient_history_info {
+  width: 100%;
+  border: 1px solid #ddd;
+  min-height: 500px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.patient_history_info .patient {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.patient_history_info > div {
+  padding: 10px;
+}
+
+.patient_history_info .warning {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.historic_appointment {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  border-top-color: #eee;
+}
+
+.historic_appointment:hover {
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.appointment_info .patient_name {
+  font-weight: bold;
+}
+
+.appointment_info .description {
+  color: #666;
+  margin-top: 10px;
+}
+
+.form-search {
+  display: inline-block;
+  margin-right: 20px;  
+}
+
+.comment {
+  color: #aaa;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.medical-specialization-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+.input-micro {
+  width: 34px;
+}
+
+.inline-label {
+  margin-left: 25px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.hr-separation {
+  margin-top: 20px;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.info-table {
+  width: 100%;
+}
+
+.info-table tr td:FIRST-CHILD {
+  color: #999;
+  text-align: right;
+  vertical-align: top;
+  padding-right: 5px;
+}
+
+.badanie form {
+  margin-bottom: 0;
+}
+
+.badanie form * {
+  font-size: 11.9px;
+}
+
+.badanie form input {
+  height: 16px;
+}
+
+.badanie hr {
+  margin: 10px 0;
+}
+
+.btn-small {
+  border-radius: 0;
+}
+
+.message-panel.success {
+  background-color: #c9fdc9;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.message-panel.error {
+  background-color: #ffc4c4;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.form-actions {
+  background-color: white;
+  border-top-color: #ccc;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.search-modal .modal-header {
+  height: 25px;
+}
+
+.search-modal .modal-footer {
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+
+.main-header {
+  display: none;
+}
+
+.visible-main-header > * {
+  margin-right: 10px;
+}
+
+.visible-main-header > a {
+  margin-top: -8px;
+  margin-left: 10px;
+}
+
+.info-form input {
+  cursor: default;
+  border: 0;
+  outline: 0;
+  margin-top: 2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.info-form input:focus {
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.info-form .control-label {
+  color: grey;
+}
+
+.info-form.form-horizontal .control-group {
+  margin-bottom: 0;
+}
+
+.info-form input[readonly], .info-form input[disabled] {
+  background-color: white;
+}
+
+.info-form label {
+  cursor: default;
+}
+
+*[ng-click] {
+  cursor: pointer;
+}
+
+.table-icd9 {
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.table-icd9 td {
+  padding: 0 20px;
+}
+
+.table-icd9 a {
+  cursor: pointer;
+}
+
+.select-icd {
+  margin: 0 !important;
+  width: 90%;
+}
+
+.add_agreement label.control-label {
+  padding: 0 !important;
+}
+
+.schedule {
+  position: relative;
+}
+
+.schedule > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+}
+
+.schedule-cursor {
+  background-color: black !important;  
+}
+
+.input-size-period {
+  width: 120px;
+}
+
+.input-size-time {
+  width: 50px;
+}
+
+.input-size-minutes {
+  width: 25px;
+}
+
+.input-price {
+  text-align: right;
+}
+
+td.print-type, th.print-type {
+  width: 70px;
+}
+
+
+table.no-border td {
+  border: 0 !important;
+  background-color: white !important;
+}
+
+table.table-internal {
+  margin-left: 40px;
+}
+
+td.no-hover {
+  background-color: white !important;
+}
+
+
+#helpRegistration {
+  width: 800px;
+}
+
+
+#helpRegistration .modal-body {
+  max-height: 740px;
+}
+
+input.ng-pristine.ng-invalid-required { border:1px solid Gold; }
+input.ng-dirty.ng-valid { border:1px solid Green; }
+input.ng-dirty.ng-invalid { border:1px solid Red; }
+input.ng-dirty.ng-valid ~ span.ok { color:green; display:inline; }
+input.ng-dirty.ng-invalid ~ span.ko { color:red; display:inline; }
+
+
+.reports .accordion-group {
+  border-width: 0;
+}
+
+.icd9-groups ul {
+  list-style-type: none;
+}
+
+.icd9-groups input.price {
+}
+
+.icd9-groups input[type='text'] {
+  margin-top: -1px;
+  margin-bottom: -4px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  border-width: 0 0 1px 0;
+  text-align: right;
+  background-color: inherit;
+}
+
+.icd9-groups input.icd9-select {
+  margin-top: -2px;
+}
+
+.icd9-groups ul ul {
+  margin-left: 0em;
+  border-left: 1px solid #eee;
+}
+
+.icd9-groups li {
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+.icd9-groups td {
+  vertical-align: top;
+}
+
+.icd9-groups .table tbody + tbody {
+border-top: 0;
+}
+
+.icd9-groups th.data {
+  width: 80px;
+  text-align: right;
+}
+
+.icd9-groups th.small {
+  width: 20px;
+}
+
+.icd9-groups th.zl {
+  width: 20px;
+}
+
+.icd9-groups th.min {
+  width: 20px;
+}
+
+.left-margin {
+  margin-left: 10px !important;
+}
+
+.appointment {
+  border-radius: 0 !important;
+  background-color: red;
+  border-color: red;
+}
+
+.appointment-additional {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+.fc-event-vert.work-hour {
+  border-radius: 0;
+  background-color: inherit;
+  border-color: inherit;
+  
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.fc-event-vert.work-hour-holiday {
+  background-color: lightGrey !important;
+  border-color: lightGrey !important;
+}
+
+.fc-event-vert.work-hour-disease {
+  background-color: grey !important;
+  border-color: grey !important;
+}
+
+header h3 {
+  margin: 5px 0;
+}
+
+.help-icon {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  top: 18px;
+}
+
+.relative {
+  position: relative;
+}
+
+.navbar-inverse {
+  box-shadow: 0 5px 10px 0 rgba(10, 10, 10, .2);
+}
+
+.navbar-inverse .loginfo {
+  cursor: pointer;
+}
+
+.complex-menu {
+  padding: 10px 15px;
+}
+
+.complex-menu > table > tbody > tr > td {
+  border-top: 0;
+}
+
+.navbar-inverse .nav.loginfo > li > a:hover,
+.navbar-inverse .nav.loginfo > li.open > a:hover {
+  color: #6acdff;
+}
+
+.page-slide {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.inline-form-text {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.appointmentStatus-NEW {
+  color: green;
+}
+
+.appointmentStatus-CLOSED {
+ color: grey; 
+}
+
+.appointmentStatus-AWAITING {
+ color: #fc3;
+}
+
+.cancelled, .archived, 
+.appointmentStatus-CANCELLED {
+ color: #bbb; 
+}
+
+.appointmentStatus-NOT_ARRIVED {
+ color: red;
+}
+
+.equipmentStatus-REMOVED {
+  color: #aaa;
+}
+
+.dialog-detalis-table {
+	margin-left: 40px;
+	width: inherit;
+}
+
+table.details-table tr td:nth-child(1) {
+  color: #999;
+  text-align: right;
+  white-space: nowrap;
+  width: 80px;
+}
+
+table.details-table tr td {
+  border-top: 0;
+}
+
+table.details-table {
+  margin-bottom: 0;
+}
+
+table.user-info-table {
+  pointer: initial;
+  min-width: 300px;
+}
+
+.select2-container .select2-choice {
+  min-width: 160px;
+}
+
+.hover-cond-visibility .hover-cond {
+  visibility: hidden;
+}
+
+.hover-cond-visibility:hover .hover-cond {
+  visibility: visible;
+}
+
+.icd9-element input[type="checkbox"] {
+  margin-top: -1px;
+}
+
+.hover-cond-visibility input[type="checkbox"].hover-cond:checked {
+  visibility: visible;
+}
+
+div.full {
+  margin: 0;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.table .center, .table .center * {
+  text-align: center;
+}
+
+.table .center * {
+  margin-left: 0;
+  display: inline;
+}
+
+.textarea-note {
+  	width:250px;
+    padding: 0;
+    border: 1px solid #ccc;
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.noteStatus-CANCELLED * {
+  color: #aaa;
+}
+
+.cardArchiveStatus-IN_USE * {
+  color: #aaa;
+}
+
+.noteStatus-CLOSED .note-status {
+  color: red;
+}
+
+.equipmentStatus-DAMAGED .equipmentStatus {
+  color: red;
+}
+
+.equipmentStatus-IN_REPAIR *, .equipmentStatus-DAMAGED * {
+  color: grey;
+}
+.equipmentStatus-IN_REPAIR .equipmentStatus {
+  color: #FFCC33;
+}
+
+.medicalDataAcquisitionAuthorizationStatus-FORBIDDEN .medicalDataAcquisitionAuthorization-status  {
+  color: red;
+}
+
+.medicalDataAcquisitionAuthorizationStatus-PERMITTED .medicalDataAcquisitionAuthorization-status  {
+  color: green;
+}
+
+.morphology {
+  margin: 0;
+  list-style: none;
+}
+   
+.morphology .price {
+
+}
+
+.morphology label:hover span {
+  text-decoration: underline;
+}
+
+.note-btn {
+	margin-left: 5px;  
+  margin-bottom: 25px;
+}
+
+.equipment-btn {
+  margin-left: 5px;  
+  margin-bottom: 25px;
+}
+
+.patient-details span.label {
+ display: inline-block;
+}
+
+.back-link {
+  font-size: 18px;
+  position: absolute;
+  margin-left: 0;
+  left: -40px;
+  top: 17px;
+}
+
+.report-table h4 {
+  margin-right: 10px;
+}
+
+.report-table ul {
+  margin-left: 0;
+}
+
+.report-table li {
+  min-width: 100px;
+}
+
+.report-table li:hover a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0081c2;
+}
+
+.report-table li {
+  list-style: none;
+}
+
+.report-table li:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0081c2;
+}
+
+.report-table > tbody > tr > td:not(:last-child) {
+  padding-right: 30px;
+}
+
+.btn-submit {
+  margin-bottom: 25px;
+}
+
+.open-appointment {
+  margin-right: 5px;
+  font-size: 26px;
+  color: green;
+}
+
+.textarea-diagnosis {
+  width: 95%;
+  border: none;
+  resize: none; 
+  box-shadow: inset 0 0 0 rgb(255, 255, 255);
+}
+
+.textarea-recommendations {
+  width: 95%;
+  border: none;
+  resize: none; 
+  box-shadow: inset 0 0 0 rgb(255, 255, 255);
+}
+
+.textarea-comments {
+  width: 95%;
+  border: none;
+  resize: none; 
+  box-shadow: inset 0 0 0 rgb(255, 255, 255);
+  margin-bottom: 25px;
+}
+
+.textarea-referral {
+  width: 95%;
+  border: none;
+  resize: none;
+  box-shadow: inset 0 0 0 rgb(255, 255, 255);
+}
+
+.control-group[class*="houseNumber"] input.houseNumber,
+.control-group[class*="houseNumber"] input.apartmentNumber {
+  width: 60px;
+}
+
+.navbar .nav > li > a.icon-off {
+  padding-right: 0;
+}
+
+.btn-above-list {
+ margin-bottom: 15px;
+}
+
+.table td.functions,
+.table th.functions {
+  width:60px; 
+  text-align: right;
+}
+
+.table td.functions {
+  padding: 0 5px;
+}
+
+.table td.functions *,
+.table th.functions * {
+  text-align: left;
+}
+
+.table.input-table input {
+  width: 100%;
+}
+
+.table.input-table .number input {
+  width: 80%;
+}
+
+.table.input-table th {
+  white-space: nowrap;
+  width: 20px;
+}
+
+.table.input-table input[type='text'] {
+  margin-top: -1px;
+  margin-bottom: -5px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  border-width: 0 0 1px 0;
+  background-color: inherit;
+  border-bottom-color: grey;
+}
+
+.table th.number,
+.table td.number,
+.table td.number input[type='text'] {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.table.input-table td.summary {
+  font-weight: bold;
+}
+
+.table.input-table td.invoice-summary {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 120%;
+  border-top: 1px solid grey;
+}
+
+.payer-icon {
+	font-size: 22px;
+	margin-left: -10px;
+}
+
+.big-icon {
+  font-size: 19px;
+}
+
+hr.before-tabs {
+  margin-bottom: 0;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.table td.mini {
+  width: 20px;
+}
+
+.strong-text {
+  font-weight: bold;
+}
+
+th.indent_100, td.indent_100 {
+  padding-left: 100px;
+}
+
+.textarea-sms {
+   width: 750px;
+   resize: none;
+}
+
+.limited-height {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.examination-list tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.examination-list a {
+  line-height: inherit;
+  font-size: 120%;
+  margin-right: 10px;
+}
+
+.drug-list > .select-list > div:nth-child(1) {
+  width: 250px;
+  margin-right: 10px;
+}
+
+.drug-list > .select-list > div:nth-child(2) {
+  width: 150px;
+}
+
+.list-person-sms {
+  margin-top: 25px;
+}
+
+.absolute-top-left {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.complex-date-chosen * {
+  color: blue;
+}
+
+.complex-date label {
+  margin-right: 10px;
+}
+
+.bankAccountNumber {
+  width: 230px;
+}
+
+footer .container {
+  position: relative;
+}
+
+footer .icons {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+footer .icons * {
+  font-size: 26px;
+  line-height: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+footer .company-title {
+  font-size: 26px;
+}
+
+.checkbox-column {
+  width: 5px;
+}
+
+.accessLog-304 {
+  color: #aaa;
+}
+
+.accessLog-404, .accessLog-401 {
+  color: red;
+}
+
+.accessLog-undefined {
+  color: #fc3;
+}
+
+.accessLog-200 {
+  color: green;
+}
+

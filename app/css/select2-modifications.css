@@ -1,0 +1,41 @@
+.select2-container-multi.select-price-list .select2-choices {
+  border: 0px;
+  background-image: inherit;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.select2-container-multi.select-price-list .select2-choices .select2-search-choice {
+  border: 0px;
+  background-color: white;
+  background-image: inherit;
+  width: 100%;
+  width: 100%;
+  box-shadow: inherit;
+  border-bottom: 0px;
+  border-top: 1px solid #ddd;
+  line-height: 20px;
+  padding-top: 4px;
+  padding-right: 5px;
+  padding-bottom: 4px;
+  margin: 0px;
+}
+
+.select2-container-multi.select-price-list .select2-choices .select2-search-choice-close {
+  top: 6px;
+}
+
+
+.select2-container-multi.select-price-list .select2-choices .select2-search-choice:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+
+.select2-container-multi.select-price-list .select2-choices .select2-search-choice:hover {
+  background-color: #f5f5f5;
+}
+
+.select2-container-multi.select-price-list .select2-choices .select2-search-field {
+  display: none;
+}
+

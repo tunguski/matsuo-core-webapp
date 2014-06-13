@@ -1,0 +1,22 @@
+<div>
+  <div class="modal-header">
+    <h4>Nowy użytkownik</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-horizontal">
+      <div mt-form-part="pl.matsuo.core.model.user.User">
+        <div mt-form-field="username" />
+        <div mt-form-field="password" />
+        <div mt-form-field="person.firstName" />
+        <div mt-form-field="person.lastName" />
+        <div mt-form-field="person.pesel" />
+        <div mt-form-field="person.address.town" />
+        <div mt-form-field="person.address.street" />
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn cancel" ng-click="close()">{{ 'cancel' | translate }}</button>
+    <button class="btn btn-primary save" ng-click="save()">{{ 'save' | translate }}</button>
+  </div>
+</div>

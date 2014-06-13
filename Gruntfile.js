@@ -338,6 +338,22 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    coveralls: {
+      options: {
+        debug: true,
+        coverage_dir: 'coverage/',
+        dryRun: false,
+        force: true,
+        recursive: true
+      }
+    },
+
+    release: {
+      options: {
+        npm: false
+      }
     }
   });
 
@@ -349,7 +365,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'bowerInstall',
+      //'bowerInstall',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -372,7 +388,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'bowerInstall',
+    //'bowerInstall',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
@@ -388,7 +404,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
+    //'newer:jshint',
     'test',
     'build'
   ]);

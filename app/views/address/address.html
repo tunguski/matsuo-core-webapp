@@ -1,0 +1,31 @@
+
+<%@page import="pl.matsuo.core.model.organization.Person"%>
+<%@page import="pl.matsuo.core.web.view.BootstrapRenderer"%>
+<%!  
+  BootstrapRenderer renderer = BootstrapRenderer.renderer();
+  //String type = request.getParameter("type");
+%>
+
+<div class="row">
+  <div class="span12">
+    <h4>Adres</h4>
+  </div>
+  
+  <div class="span6">
+    <%= renderer.create(Person.class).render(
+        "address.town",
+        "address.zipCode",
+        "address.gmina",
+        "address.street",
+        "address.houseNumber",
+        "address.apartmentNumber") %>
+  </div>
+  
+  <div class="span6">
+    <%= renderer.create(Person.class).render(
+        "address.phone",
+        "address.country",
+        "address.email",
+        "address.comment") %>
+  </div>
+</div>

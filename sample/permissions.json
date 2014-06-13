@@ -1,0 +1,77 @@
+{
+  "functions": {
+    "addUser": ["GET"],
+    "blockUser": ["GET"],
+    "addAppointment": ["GET"],
+    "/reckonings/*": ["GET"],
+    // test
+
+    "/api/login": ["GET", "POST"],
+    "/api/login/*": ["GET", "POST"],
+    "/api/login/remindPassword/*": ["POST"],
+
+    "/api/users/*": ["GET", "POST", "PUT"],
+    "/api/smsMessages/*": ["GET", "POST", "PUT"],
+    "/api/mailMessages/*": ["GET", "POST", "PUT"],
+
+    // ogólne uprawnienia dla elementów powszechnie wykorzystywanych
+    // TODO: te rzeczy powinny być dostępne wyłącznie po zalogowaniu; do momentu zalogowania widoczna jest tylko strona logowania bez dostępu do żadnych skryptów!
+    "/": ["GET"],
+    "/index.html": ["GET"],
+    "/css/*": ["GET"],
+    "/js/*": ["GET"],
+    "/img/*": ["GET"],
+    "/views/*": ["GET"],
+    "/login/*": ["GET"],
+    "/favicon.ico": ["GET"]
+  },
+
+
+
+  "functionSets": {
+
+    "configureClinic": {
+      "/api/users/*": ["POST", "PUT"],
+      "#/management": ["GET"],
+      "#/contact/alerts": ["GET"]
+    },
+
+    "logged": {
+      "/api/login/*": ["GET", "POST"]
+    },
+
+    "allowAll": {
+      "/": ["GET"],
+      "/index.html": ["GET"],
+      "/css/*": ["GET"],
+      "/js/*": ["GET"],
+      "/img/*": ["GET"],
+      "/views/*": ["GET"],
+      "/login/*": ["GET"],
+      "/favicon.ico": ["GET"],
+
+      "/api/login": ["GET", "POST"],
+      "/api/login/remindPassword/*": ["POST"],
+
+      "#/base/notes": ["GET"],
+      "#/contact/sms": ["GET"],
+      "#/contact/alerts": ["GET"],
+      "#/contact/mail": ["GET"]
+    }
+  },
+
+
+
+  "permissions": {
+
+    "USER": [
+      "logged",
+      "allowAll"
+    ],
+
+    "GUEST": [
+      "allowAll"
+    ]
+  }
+}
+
