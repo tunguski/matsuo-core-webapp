@@ -1,0 +1,22 @@
+pre {
+}
+
+.json-pretty .string {
+  color: green;
+}
+
+.json-pretty .number {
+  color: darkorange;
+}
+
+.json-pretty .boolean {
+  color: blue;
+}
+
+.json-pretty .null {
+  color: magenta;
+}
+
+.json-pretty .key {
+  color: red;
+}
