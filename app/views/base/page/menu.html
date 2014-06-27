@@ -1,0 +1,55 @@
+<div ng-controller="MenuController" class="navbar-inner">
+  <div class="container">
+
+    <a class="brand" ng-href="{{homeLink}}">Matsuo Core App</a>
+
+    <div class="nav-collapse collapse">
+      <ul class="nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Zarządzanie<b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <a>Osoby</a>
+              <ul class="dropdown-menu">
+                <li><a href="#/organization/persons">Osoby fizyczne</a></li>
+                <li><a href="#/management/users">Użytkownicy systemu</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-submenu">
+              <a>Magazyny</a>
+              <ul class="dropdown-menu">
+                <li><a href="#/storage/storage">Magazyn</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#/organization/companies">Płatnicy</a>
+            </li>
+            <li>
+              <a href="#/numerations/numerations">Numeracje</a>
+            </li>
+            <li>
+              <a href="#/cash/cashRegisters">Kasy</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <form class="navbar-search pull-left">
+      <input type="text" class="search-query" placeholder="Search">
+    </form>
+
+    <ul class="nav pull-right loginfo">
+      <li class="dropdown">
+        <a class="dropdown-toggle login" href="#">{{ user.person.firstName + ' ' + user.person.lastName }}<i class="caret"></i></a>
+        <div ng-controller="UserInfoPanelController" class="dropdown-menu complex-menu">
+          <span ng-include="'/views/base/user_info_panel.jsp'"></span>
+        </div>
+      </li>
+      <li><a class="icon-off" ng-click="logoff()"></a></li>
+    </ul>
+  </div>
+</div>

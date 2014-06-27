@@ -15,37 +15,55 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/bower_components/underscore/underscore.js',
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-sanitize/angular-sanitize.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/angular-resource/angular-resource.js',
-      'app/bower_components/angular-route/angular-route.js',
+      'bower_components/underscore/underscore.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-sanitize/angular-sanitize.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-translate/angular-translate.js',
+      'bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js',
 
-      'app/js/app.js',
-      'app/js/controllers/main.js',
+      'bower_components/matsuo-js-util/matsuo-js-util.js',
+      'bower_components/matsuo-ng-route/matsuo-ng-route.js',
+      'bower_components/matsuo-ng-resource/matsuo-ng-resource.js',
+
+      'bower_components/angular-mocks/angular-mocks.js',
+ 
+
+      'app/scripts/webapp.js',
+      'app/scripts/**/*.js',
       //'matsuo-js-util.js',
       'test/**/*.js'
     ],
 
 
     // list of files to exclude
-    exclude: [
-      
-    ],
-
+    exclude: [],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-    
+      "app/scripts/**/*.js": "coverage"
     },
 
+    coverageReporter: {
+      type: "lcov",
+      dir: "coverage/"
+    },
+
+    plugins: [
+      'karma-jasmine',
+      'karma-phantomjs-launcher',
+      'karma-coverage'
+    ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: [
+      'progress',
+      'coverage'
+    ],
 
 
     // web server port

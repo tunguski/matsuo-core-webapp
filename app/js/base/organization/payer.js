@@ -1,2 +1,0 @@
-
-restFactory("Payer");
