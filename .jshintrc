@@ -21,7 +21,6 @@
   "globals": {
     "angular": false,
     "moment": false,
-    "_": false,
-    "buildRestFactory": false
+    "_": false
   }
 }
