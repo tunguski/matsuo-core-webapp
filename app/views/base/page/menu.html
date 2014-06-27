@@ -46,7 +46,7 @@
       <li class="dropdown">
         <a class="dropdown-toggle login" href="#">{{ user.person.firstName + ' ' + user.person.lastName }}<i class="caret"></i></a>
         <div ng-controller="UserInfoPanelController" class="dropdown-menu complex-menu">
-          <span ng-include="'/views/base/user_info_panel.jsp'"></span>
+          <span ng-include="'/views/base/user_info_panel.html'"></span>
         </div>
       </li>
       <li><a class="icon-off" ng-click="logoff()"></a></li>
