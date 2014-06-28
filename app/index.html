@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
 
+    <!--
+    <link rel="stylesheet" href="styles/bs31/non-responsive.css">
+    -->
     <link rel="stylesheet" href="styles/bs31/html.css">
     <link rel="stylesheet" href="styles/bs31/bootstrap-modifications.css">
     <link rel="stylesheet" href="styles/bs31/matsuo-core.css">
@@ -26,9 +29,8 @@
 
     <!-- top menu -->
     <div ng-show="isLoggedIn()" role="navigation"
-         class="navbar navbar-inverse navbar-fixed-top slide-with-page hidden-on-startup">
-      <div class="nav-collapse collapse" ng-include="'/views/base/page/menu.html'">
-      </div>
+         class="navbar navbar-inverse navbar-fixed-top slide-with-page hidden-on-startup"
+         ng-include="'/views/base/page/menu.html'">
     </div>
 
     <!-- page title -->

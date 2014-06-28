@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: 'open sans', sans-serif;
+  background: url("../../images/pattern-23s3.png");
 }
 
 input, button, select, textarea {
@@ -33,8 +34,7 @@ header {
 }
 
 header > div.container {
-  padding: 6px;
-  padding-top: 7px;
+  padding: 10px 20px;
 }
 
 header h3 > * {

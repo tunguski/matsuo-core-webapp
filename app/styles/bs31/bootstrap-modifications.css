@@ -76,3 +76,11 @@ body .modal.wider {
   cursor: pointer;
 }
 
+.navbar-inverse .search-query {
+  background-color: #666;
+  transition: 0.5s;
+}
+
+.navbar-inverse .search-query:focus {
+  background-color: white;
+}

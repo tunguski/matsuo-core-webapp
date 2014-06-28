@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('mt.webapp', ['mt.ui'])
+    .config(function (mtRouteConfig) {
+      mtRouteConfig.apiRedirects.api = 'http://localhost:8080';
+    })
     .config(function (restFactoryProvider) {
       restFactoryProvider
           .define('MailMessage')
