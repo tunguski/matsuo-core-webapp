@@ -1,4 +1,4 @@
-<div ng-controller="MenuController" class="container">
+<div ng-controller="MenuCtrl" class="container">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
@@ -11,33 +11,20 @@
     </div>
 
     <div class="collapse navbar-collapse" collapse="isCollapsed">
+
       <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Zarządzanie<b class="caret"></b></a>
+        <li ng-repeat="menuGroup in menuService.menu" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">
+            <span  translate="{{menuGroup.title}}"></span><b class="caret"></b>
+          </a>
           <ul class="dropdown-menu">
-            <li class="dropdown-submenu">
-              <a>Osoby</a>
-              <ul class="dropdown-menu">
-                <li><a href="#/organization/persons">Osoby fizyczne</a></li>
-                <li><a href="#/management/users">Użytkownicy systemu</a></li>
+            <li ng-repeat="menuElement in menuGroup.elements" ng-class="!!menuElement.elements ? 'dropdown-submenu' : 'xxx'">
+              <a href="{{menuElement.href}}" translate="{{menuElement.title}}"></a>
+              <ul class="dropdown-menu" ng-if="menuElement.elements">
+                <li ng-repeat="subElement in menuElement.elements">
+                  <a href="{{menuElement.href}}" translate="{{subElement.title}}"></a>
+                </li>
               </ul>
-            </li>
-
-            <li class="dropdown-submenu">
-              <a>Magazyny</a>
-              <ul class="dropdown-menu">
-                <li><a href="#/storage/storage">Magazyn</a></li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="#/organization/companies">Płatnicy</a>
-            </li>
-            <li>
-              <a href="#/numerations/numerations">Numeracje</a>
-            </li>
-            <li>
-              <a href="#/cash/cashRegisters">Kasy</a>
             </li>
           </ul>
         </li>

@@ -4,6 +4,30 @@ angular.module('mt.webapp', ['mt.ui'])
     .config(function (mtRouteConfig) {
       mtRouteConfig.apiRedirects.api = 'http://localhost:8080';
     })
+    .run(function (menuService) {
+      menuService.menu.length = 0;
+      menuService.menu.push({
+        title: 'Zarządzanie',
+        elements: [
+          {
+            title: 'Osoby',
+            elements: [
+              { title: 'Osoby fizyczne', href: '#/organization/persons' },
+              { title: 'Użytkownicy systemu', href: '#/management/users' }
+            ]
+          },
+          {
+            title: 'Magazyny',
+            elements: [
+              { title: 'Magazyn', href: '#/storage/storage' }
+            ]
+          },
+          { title: 'Płatnicy', href: '#/organization/companies' },
+          { title: 'Numeracje', href: '#/numerations/numerations' },
+          { title: 'Kasy', href: '#/cash/cashRegisters' }
+        ]
+      });
+    })
     .config(function (restFactoryProvider) {
       restFactoryProvider
           .define('MailMessage')
