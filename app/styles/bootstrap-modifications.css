@@ -22,10 +22,7 @@ body .modal.wider {
 }
 
 /** Wyśrodkowanie ikon względem linii tekstu formularza */
-.form-inline i[class^="icon-"],
-.form-inline i[class*=" icon-"],
-.form-inline a[class^="icon-"],
-.form-inline a[class*=" icon-"]{
+.form-inline i.fa, .form-inline a.fa {
   vertical-align: middle;
 }
 
@@ -43,21 +40,25 @@ body .modal.wider {
   border-radius: 0;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+.fa {
   color: #999;
   margin-left: 10px;
   font-size: 110%;
   display: inline;
 }
 
-.btn [class^="icon-"], .btn [class*=" icon-"] {
+.navbar .fa {
+  margin-left: 0;
+}
+
+.btn .fa {
   color: inherit;
   margin-left: inherit;
   font-size: inherit;
   display: inherit;
 }
 
-[class^="icon-"]:hover, [class*=" icon-"]:hover {
+.fa:hover {
   text-decoration: none;
   cursor: pointer;
 }

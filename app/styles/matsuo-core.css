@@ -39,111 +39,23 @@
 }
 
 .main-panel {
-  padding: 10px;
-  margin-top: 20px;
   position: relative;
   z-index: 2;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 1px 5px 1px rgba(10, 10, 10, .2);
 }
 
-.appointment_info {
-  width: 100%;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 4px;
-  position: relative;
-  cursor: pointer;
-}
-
-.appointment_info:hover {
-  border-color: #bbb;
-  background-color: #f9f9f9;
-}
-
-.appointment_info_done, .scheduleToday-CLOSED {
-  background-color: #E0FFC1 !important;
-}
-
-.appointment_info.scheduleToday-NOT_ARRIVED {
-  background-color: #FFA07A;
-}
-
-.appointment_info .date {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-.appointment_info .actions {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-
-.appointment_history {
-  position: relative;
-}
-
-.appointment_history .status {
-  position: absolute;
-  right: 10px;
-  top: 0;
-}
-
-.history_displayed, .scheduleToday-AWAITING {
-  background-color: #FFFFCC !important;
-}
-
-.patient_history_info {
-  width: 100%;
-  border: 1px solid #ddd;
-  min-height: 500px;
-  position: relative;
-  border-radius: 4px;
-}
-
-.patient_history_info .patient {
-  font-size: 18px;
-  text-decoration: underline;
-}
-
-.patient_history_info > div {
-  padding: 10px;
-}
-
-.patient_history_info .warning {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-.historic_appointment {
-  padding: 10px;
-  border: 1px solid white;
-  border-radius: 4px;
-  border-top-color: #eee;
-}
-
-.historic_appointment:hover {
-  border-radius: 4px;
-  background-color: #f9f9f9;
-}
-
-.appointment_info .patient_name {
-  font-weight: bold;
-}
-
-.appointment_info .description {
-  color: #666;
-  margin-top: 10px;
+@media (min-width: 768px) {
+  .main-panel {
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px 1px rgba(10, 10, 10, .2);
+  }
 }
 
 .form-search {
   display: inline-block;
-  margin-right: 20px;  
+  margin-right: 20px;
 }
 
 .comment {
@@ -156,13 +68,6 @@
 
 .text-green {
   color: green;
-}
-
-.medical-specialization-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0;
 }
 
 .input-micro {
@@ -194,22 +99,6 @@
   text-align: right;
   vertical-align: top;
   padding-right: 5px;
-}
-
-.badanie form {
-  margin-bottom: 0;
-}
-
-.badanie form * {
-  font-size: 11.9px;
-}
-
-.badanie form input {
-  height: 16px;
-}
-
-.badanie hr {
-  margin: 10px 0;
 }
 
 .btn-small {
@@ -297,43 +186,6 @@
   cursor: pointer;
 }
 
-.table-icd9 {
-  border: 1px solid #ddd;
-  margin-top: 10px;
-}
-
-.table-icd9 td {
-  padding: 0 20px;
-}
-
-.table-icd9 a {
-  cursor: pointer;
-}
-
-.select-icd {
-  margin: 0 !important;
-  width: 90%;
-}
-
-.add_agreement label.control-label {
-  padding: 0 !important;
-}
-
-.schedule {
-  position: relative;
-}
-
-.schedule > input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -100;
-}
-
-.schedule-cursor {
-  background-color: black !important;  
-}
-
 .input-size-period {
   width: 120px;
 }
@@ -369,11 +221,6 @@ td.no-hover {
 }
 
 
-#helpRegistration {
-  width: 800px;
-}
-
-
 #helpRegistration .modal-body {
   max-height: 740px;
 }
@@ -384,100 +231,8 @@ input.ng-dirty.ng-invalid { border:1px solid Red; }
 input.ng-dirty.ng-valid ~ span.ok { color:green; display:inline; }
 input.ng-dirty.ng-invalid ~ span.ko { color:red; display:inline; }
 
-
-.reports .accordion-group {
-  border-width: 0;
-}
-
-.icd9-groups ul {
-  list-style-type: none;
-}
-
-.icd9-groups input.price {
-}
-
-.icd9-groups input[type='text'] {
-  margin-top: -1px;
-  margin-bottom: -4px;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  border-width: 0 0 1px 0;
-  text-align: right;
-  background-color: inherit;
-}
-
-.icd9-groups input.icd9-select {
-  margin-top: -2px;
-}
-
-.icd9-groups ul ul {
-  margin-left: 0em;
-  border-left: 1px solid #eee;
-}
-
-.icd9-groups li {
-    padding-left: 2em;
-    text-indent: -2em;
-}
-
-.icd9-groups td {
-  vertical-align: top;
-}
-
-.icd9-groups .table tbody + tbody {
-border-top: 0;
-}
-
-.icd9-groups th.data {
-  width: 80px;
-  text-align: right;
-}
-
-.icd9-groups th.small {
-  width: 20px;
-}
-
-.icd9-groups th.zl {
-  width: 20px;
-}
-
-.icd9-groups th.min {
-  width: 20px;
-}
-
 .left-margin {
   margin-left: 10px !important;
-}
-
-.appointment {
-  border-radius: 0 !important;
-  background-color: red;
-  border-color: red;
-}
-
-.appointment-additional {
-  background-color: yellow;
-  border-color: yellow;
-}
-
-.fc-event-vert.work-hour {
-  border-radius: 0;
-  background-color: inherit;
-  border-color: inherit;
-  
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-}
-
-.fc-event-vert.work-hour-holiday {
-  background-color: lightGrey !important;
-  border-color: lightGrey !important;
-}
-
-.fc-event-vert.work-hour-disease {
-  background-color: grey !important;
-  border-color: grey !important;
 }
 
 header h3 {
@@ -487,8 +242,8 @@ header h3 {
 .help-icon {
   position: absolute;
   right: 0;
-  font-size: 18px;
-  top: 18px;
+  font-size: 22px;
+  top: 13px;
 }
 
 .relative {
@@ -527,34 +282,9 @@ header h3 {
   margin-top: 3px;
 }
 
-.appointmentStatus-NEW {
-  color: green;
-}
-
-.appointmentStatus-CLOSED {
- color: grey; 
-}
-
-.appointmentStatus-AWAITING {
- color: #fc3;
-}
-
-.cancelled, .archived, 
-.appointmentStatus-CANCELLED {
- color: #bbb; 
-}
-
-.appointmentStatus-NOT_ARRIVED {
- color: red;
-}
-
-.equipmentStatus-REMOVED {
-  color: #aaa;
-}
-
 .dialog-detalis-table {
-	margin-left: 40px;
-	width: inherit;
+  margin-left: 40px;
+  width: inherit;
 }
 
 table.details-table tr td:nth-child(1) {
@@ -589,10 +319,6 @@ table.user-info-table {
   visibility: visible;
 }
 
-.icd9-element input[type="checkbox"] {
-  margin-top: -1px;
-}
-
 .hover-cond-visibility input[type="checkbox"].hover-cond:checked {
   visibility: visible;
 }
@@ -615,77 +341,25 @@ div.full {
 }
 
 .textarea-note {
-  	width:250px;
-    padding: 0;
-    border: 1px solid #ccc;
-    margin-left: 0;
-    margin-top: 5px;
-}
-
-.noteStatus-CANCELLED * {
-  color: #aaa;
-}
-
-.cardArchiveStatus-IN_USE * {
-  color: #aaa;
-}
-
-.noteStatus-CLOSED .note-status {
-  color: red;
-}
-
-.equipmentStatus-DAMAGED .equipmentStatus {
-  color: red;
-}
-
-.equipmentStatus-IN_REPAIR *, .equipmentStatus-DAMAGED * {
-  color: grey;
-}
-.equipmentStatus-IN_REPAIR .equipmentStatus {
-  color: #FFCC33;
-}
-
-.medicalDataAcquisitionAuthorizationStatus-FORBIDDEN .medicalDataAcquisitionAuthorization-status  {
-  color: red;
-}
-
-.medicalDataAcquisitionAuthorizationStatus-PERMITTED .medicalDataAcquisitionAuthorization-status  {
-  color: green;
-}
-
-.morphology {
-  margin: 0;
-  list-style: none;
-}
-   
-.morphology .price {
-
-}
-
-.morphology label:hover span {
-  text-decoration: underline;
-}
-
-.note-btn {
-	margin-left: 5px;  
-  margin-bottom: 25px;
-}
-
-.equipment-btn {
-  margin-left: 5px;  
-  margin-bottom: 25px;
-}
-
-.patient-details span.label {
- display: inline-block;
+  width:250px;
+  padding: 0;
+  border: 1px solid #ccc;
+  margin-left: 0;
+  margin-top: 5px;
 }
 
 .back-link {
-  font-size: 18px;
+  font-size: 22px;
   position: absolute;
   margin-left: 0;
   left: -40px;
-  top: 17px;
+  top: 12px;
+}
+
+@media (max-width: 768px) {
+  .back-link {
+    display: none;
+  }
 }
 
 .report-table h4 {
@@ -724,57 +398,22 @@ div.full {
   margin-bottom: 25px;
 }
 
-.open-appointment {
-  margin-right: 5px;
-  font-size: 26px;
-  color: green;
-}
-
-.textarea-diagnosis {
-  width: 95%;
-  border: none;
-  resize: none; 
-  box-shadow: inset 0 0 0 rgb(255, 255, 255);
-}
-
-.textarea-recommendations {
-  width: 95%;
-  border: none;
-  resize: none; 
-  box-shadow: inset 0 0 0 rgb(255, 255, 255);
-}
-
-.textarea-comments {
-  width: 95%;
-  border: none;
-  resize: none; 
-  box-shadow: inset 0 0 0 rgb(255, 255, 255);
-  margin-bottom: 25px;
-}
-
-.textarea-referral {
-  width: 95%;
-  border: none;
-  resize: none;
-  box-shadow: inset 0 0 0 rgb(255, 255, 255);
-}
-
 .control-group[class*="houseNumber"] input.houseNumber,
 .control-group[class*="houseNumber"] input.apartmentNumber {
   width: 60px;
 }
 
-.navbar .nav > li > a.icon-off {
+.navbar .nav > li > a.fa-power-off {
   padding-right: 0;
 }
 
 .btn-above-list {
- margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .table td.functions,
 .table th.functions {
-  width:60px; 
+  width:60px;
   text-align: right;
 }
 
@@ -828,11 +467,6 @@ div.full {
   border-top: 1px solid grey;
 }
 
-.payer-icon {
-	font-size: 22px;
-	margin-left: -10px;
-}
-
 .big-icon {
   font-size: 19px;
 }
@@ -858,36 +492,13 @@ th.indent_100, td.indent_100 {
 }
 
 .textarea-sms {
-   width: 750px;
-   resize: none;
+  width: 750px;
+  resize: none;
 }
 
 .limited-height {
   max-height: 600px;
   overflow-y: auto;
-}
-
-.examination-list tr:hover td {
-  background-color: #f5f5f5;
-}
-
-.examination-list a {
-  line-height: inherit;
-  font-size: 120%;
-  margin-right: 10px;
-}
-
-.drug-list > .select-list > div:nth-child(1) {
-  width: 250px;
-  margin-right: 10px;
-}
-
-.drug-list > .select-list > div:nth-child(2) {
-  width: 150px;
-}
-
-.list-person-sms {
-  margin-top: 25px;
 }
 
 .absolute-top-left {
@@ -903,10 +514,6 @@ th.indent_100, td.indent_100 {
 
 .complex-date label {
   margin-right: 10px;
-}
-
-.bankAccountNumber {
-  width: 230px;
 }
 
 footer .container {
