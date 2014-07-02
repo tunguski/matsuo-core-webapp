@@ -33,6 +33,11 @@ module.exports = function(config) {
       'bower_components/matsuo-ng-resource/matsuo-ng-resource.js',
       'bower_components/matsuo-ng-ui/app/scripts/mt.ui/ui.js',
       'bower_components/matsuo-ng-ui/app/scripts/mt.ui/*.js',
+      'bower_components/matsuo-ng-ui/app/scripts/mt.ui/**/*.js',
+
+      'bower_components/matsuo-ng-ui/app/scripts/*.js',
+      'bower_components/matsuo-ng-ui/app/scripts/base/*.js',
+      'bower_components/matsuo-ng-ui/app/scripts/base/**/*.js',
 
       'bower_components/angular-mocks/angular-mocks.js',
 

@@ -16,7 +16,7 @@ body, input, button, select, textarea {
 
 @media (min-width: 768px) {
   body {
-    background: url("../../images/pattern-23s3.png");
+    background: url("../images/pattern-23s3.png");
   }
 }
 
