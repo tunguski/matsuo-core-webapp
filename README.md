@@ -1,0 +1,3 @@
+# Matsuo IT AngularJs simple webapp skeleton
+
+[![Build Status](https://travis-ci.org/tunguski/matsuo-core-webapp.svg?branch=master)](https://travis-ci.org/tunguski/matsuo-core-webapp) [![Coverage Status](https://coveralls.io/repos/tunguski/matsuo-core-webapp/badge.png?branch=master)](https://coveralls.io/r/tunguski/matsuo-core-webapp?branch=master) [![dependency Status](https://david-dm.org/tunguski/matsuo-core-webapp/status.png?branch=master)](https://david-dm.org/tunguski/matsuo-core-webapp#info=dependencies) [![devDependency Status](https://david-dm.org/tunguski/matsuo-core-webapp/dev-status.png?branch=master)](https://david-dm.org/tunguski/matsuo-core-webapp#info=devDependencies)
