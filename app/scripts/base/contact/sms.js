@@ -21,7 +21,7 @@ angular.module('mt.webapp')
 
 
       $scope.save = function () {
-        $http.post('/api/smsMessages/multiMessage', {
+        SmsMessage.multiMessage({
           message: $scope.entity,
           parties: $scope.parties
         }, function (entity, headers) {

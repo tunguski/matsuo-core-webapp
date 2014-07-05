@@ -31,7 +31,14 @@ angular.module('mt.webapp', ['mt.ui'])
     .config(function (restFactoryProvider) {
       restFactoryProvider
           .define('MailMessage')
-          .define('SmsMessage')
+          .define('SmsMessage', {
+            additionalFunctions: {
+              multiMessage: {
+                method: 'post',
+                url: '/multiMessage'
+              }
+            }
+          })
           .define('AccessLog')
           .define('Numeration')
           .define('Payer')
