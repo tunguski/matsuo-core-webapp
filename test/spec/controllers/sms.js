@@ -1,9 +1,5 @@
 'use strict';
 
-var toastr = {
-  success: function () {}
-};
-
 
 describe('Controller: ', function () {
 
