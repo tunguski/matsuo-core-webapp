@@ -14,7 +14,7 @@ body, input, button, select, textarea {
   font-family: 'open sans', sans-serif;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   body {
     background: url("../images/pattern-23s3.png");
   }

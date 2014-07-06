@@ -14,15 +14,15 @@
 
       <ul class="nav navbar-nav">
         <li ng-repeat="menuGroup in menuService.menu" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">
+          <a class="dropdown-toggle">
             <span  translate="{{menuGroup.title}}"></span><b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
             <li ng-repeat="menuElement in menuGroup.elements" ng-class="!!menuElement.elements ? 'dropdown-submenu' : 'xxx'">
-              <a href="{{menuElement.href}}" translate="{{menuElement.title}}"></a>
+              <a ng-href="{{menuElement.href}}" translate="{{menuElement.title}}"></a>
               <ul class="dropdown-menu" ng-if="menuElement.elements">
                 <li ng-repeat="subElement in menuElement.elements">
-                  <a href="{{menuElement.href}}" translate="{{subElement.title}}"></a>
+                  <a ng-href="{{subElement.href}}" translate="{{subElement.title}}"></a>
                 </li>
               </ul>
             </li>
