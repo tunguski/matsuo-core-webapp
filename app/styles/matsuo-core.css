@@ -57,6 +57,10 @@
   .container {
     width: 100%;
   }
+
+  .navbar-form {
+    display: none;
+  }
 }
 
 .form-search {
@@ -246,10 +250,16 @@ header h3 {
 }
 
 .help-icon {
-  position: absolute;
-  right: 0;
-  font-size: 22px;
-  top: 13px;
+  float: right;
+  margin-right: -5px;
+  margin-top: 9px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .help-icon {
+    display: none;
+  }
 }
 
 .relative {
@@ -368,13 +378,12 @@ div.full {
 
 .back-link {
   font-size: 22px;
-  position: absolute;
-  margin-left: 0;
-  left: -40px;
-  top: 12px;
+  margin-top: 8px;
+  margin-left: -40px;
+  float: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .back-link {
     display: none;
   }
