@@ -297,11 +297,23 @@ table.details-table tr td:nth-child(1) {
   color: #999;
   text-align: right;
   white-space: nowrap;
-  width: 80px;
+  width: 33.33333333%;
+  /*width: 80px;*/
 }
 
 table.details-table tr td {
   border-top: 0;
+}
+
+@media (max-width: 992px) {
+  table.details-table tr td {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  table.details-table tr td:nth-child(1) {
+    padding-right: 15px;
+  }
 }
 
 table.details-table {

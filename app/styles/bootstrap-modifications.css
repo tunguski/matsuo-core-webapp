@@ -1,12 +1,4 @@
 
-.form-horizontal .control-group {
-  margin-bottom: 5px;
-}
-
-.form-horizontal .control-label {
-  padding-top: 4px;
-}
-
 /** Wyśrodkowanie ikon względem linii tekstu formularza */
 .form-inline i.fa, .form-inline a.fa {
   vertical-align: middle;
