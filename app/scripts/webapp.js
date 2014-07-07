@@ -1,9 +1,6 @@
 'use strict';
 
 angular.module('mt.webapp', ['mt.ui'])
-    .config(function (mtRouteConfig) {
-      mtRouteConfig.apiRedirects.api = 'http://localhost:8080';
-    })
     .run(function (menuService) {
       menuService.menu.length = 0;
       menuService.menu.push({

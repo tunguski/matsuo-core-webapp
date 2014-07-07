@@ -27,7 +27,7 @@ angular.module('mt.webapp')
             controller: controller,
             user: user
           }, function() { $scope.refreshListing(); });
-        }
+        };
       }
 
       $scope.addUser = openUserDialog('/views/management/modal/addUser.html', 'AddUserController');

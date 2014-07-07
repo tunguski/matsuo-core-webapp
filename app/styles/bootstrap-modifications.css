@@ -7,6 +7,12 @@
   padding-top: 4px;
 }
 
+/** Wyśrodkowanie ikon względem linii tekstu formularza */
+.form-inline i.fa, .form-inline a.fa {
+  vertical-align: middle;
+}
+
+
 body .modal.fullscreen {
   /* new custom width */
   width: 60%;
@@ -21,11 +27,6 @@ body .modal.wider {
   margin-left: -22%;
 }
 
-/** Wyśrodkowanie ikon względem linii tekstu formularza */
-.form-inline i.fa, .form-inline a.fa {
-  vertical-align: middle;
-}
-
 .modal > .modal-body {
   max-height: inherit;
 }
@@ -33,6 +34,27 @@ body .modal.wider {
 .modal > .modal-header > h4:FIRST-CHILD {
   margin-top: 5px;
 }
+
+/* zmiany wyglądu modali */
+
+div.modal-content {
+  border-radius: 0;
+}
+
+div.modal .modal-header {
+  border-bottom: 0;
+}
+
+div.modal .modal-header h3 {
+  margin: 5px 0;
+  font-size: 17.5px;
+  line-height: 20px;
+}
+
+div.modal .modal-footer {
+  padding: 10px;
+}
+
 
 .nav-pills > li > a {
   -webkit-border-radius: 0;

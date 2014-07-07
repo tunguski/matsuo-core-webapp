@@ -76,25 +76,3 @@ select {
 hr {
   border-top: 1px solid #ccc;
 }
-
-
-/* zmiany wyglądu modali */
-
-div.modal {
-  border-radius: 0;
-}
-
-div.modal .modal-header {
-  border-bottom: 0;
-}
-
-div.modal .modal-header h3 {
-  margin: 5px 0;
-  font-size: 17.5px;
-  line-height: 20px;
-}
-
-div.modal .modal-footer {
-  padding: 10px;
-}
-
