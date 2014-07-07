@@ -9,7 +9,7 @@
  */
 angular.module('mt.webapp')
     .controller('OrganizationUnitsController', function ($scope, $http, $dialog, OrganizationUnit) {
-      $scope.setTitle("Płatnicy");
+      $scope.setTitle("Firmy");
 
 
       $scope.organizationUnitsWatchers = [];

@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name mt.webapp.controller:OrganizationUnitInfoController
- * @description
- * # OrganizationUnitInfoController
- * Controller of the mt.webapp
- */
 angular.module('mt.webapp')
     .value('organizationUnitTabs', [
       { title: 'Pracownicy', src: '/views/organization/tabs/employees.html'},
@@ -14,13 +7,25 @@ angular.module('mt.webapp')
       { title: 'Projekty', src: '/views/organization/tabs/projects.html'},
     ])
 
-    .controller('OrganizationUnitInfoController', function ($scope, $routeParams, $http, $dialog, organizationUnitTabs) {
+    /**
+     * @ngdoc function
+     * @name mt.webapp.controller:OrganizationUnitInfoController
+     * @description
+     * # OrganizationUnitInfoController
+     * Controller of the mt.webapp
+     */
+    .controller('OrganizationUnitInfoController', function ($scope, $routeParams, $http, $dialog, organizationUnitTabs,
+        OrganizationUnit) {
       $scope.setTitle("<span><span class='comment'>Firma</span> \"{{entity.fullName}}\"</span>", $scope);
       $scope.tabs = organizationUnitTabs;
 
       $scope.refresh = function() {
-        $http.get('/api/organizationUnits/' + $routeParams.idEntity + '/employees').success(function (employees) {
-          $scope.employees = employees;
+        OrganizationUnit.get({ idOrganizationUnit: $routeParams.idEntity }, function (organizationUnit) {
+          $scope.entity = organizationUnit;
+
+          $http.get('/api/organizationUnits/' + $routeParams.idEntity + '/employees').success(function (employees) {
+            $scope.employees = employees;
+          });
         });
       };
       $scope.refresh();
