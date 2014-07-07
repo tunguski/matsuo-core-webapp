@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name mt.ui.controller:MailController
+ * @name mt.webapp.controller:MailController
  * @description
  * # MailController
- * Controller of the mt.ui
+ * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
     .controller('MailController', function ($scope, $http, $timeout, validationService,  MailMessage) {

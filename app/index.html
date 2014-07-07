@@ -39,9 +39,9 @@
     <!-- page title -->
     <header id="overview" ng-show="isLoggedIn()" ng-controller="HeaderController" class="subhead hidden-on-startup">
       <div class="container relative">
-        <a href="javascript:;" onclick="window.history.back()" class="icon-reply back-link"></a>
+      <a href="javascript:;" onclick="window.history.back()" class="fa fa-reply back-link"></a>
         <h3 ng-bind-html="title"></h3>
-        <a class="icon-info-sign help-icon" data-toggle="modal" ng-click="showHelp()"></a>
+      <a class="fa fa-info-circle help-icon" data-toggle="modal" ng-click="showHelp()"></a>
       </div>
     </header>
 
@@ -64,11 +64,11 @@
         <p>Apache License 2.0 <br/>
            Created by Matuo IT 2012 - {{actualYear}}</p>
         <p class="icons">
-          <a class="icon-google-plus"></a>
-          <a class="icon-twitter"></a>
-          <a class="icon-facebook"></a>
+        <a class="fa fa-google-plus"></a>
+        <a class="fa fa-twitter"></a>
+        <a class="fa fa-facebook"></a>
           <br/>
-          <a class="icon-noicon company-title">Matsuo IT</a>
+        <a class="fa company-title">Matsuo IT</a>
         </p>
       </div>
     </footer>
@@ -120,12 +120,16 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/webapp.js"></script>
+
     <script src="scripts/base/contact/mail.js"></script>
     <script src="scripts/base/contact/sms.js"></script>
     <script src="scripts/base/logs/accessLogs.js"></script>
     <script src="scripts/base/numerations/numerations.js"></script>
     <script src="scripts/base/users/users.js"></script>
     <script src="scripts/base/user_info_panel.js"></script>
+
+    <script src="scripts/organization/organizationUnits.js"></script>
+    <script src="scripts/organization/organizationUnit.js"></script>
     <!-- endbuild -->
   </body>
 </html>

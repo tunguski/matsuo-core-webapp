@@ -3,10 +3,10 @@
 
 /**
  * @ngdoc function
- * @name mt.ui.controller:SmsController
+ * @name mt.webapp.controller:SmsController
  * @description
  * # SmsController
- * Controller of the mt.ui
+ * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
     .controller('SmsController', function SmsController($scope, $http, validationService, SmsMessage) {

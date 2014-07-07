@@ -1,0 +1,108 @@
+<div ng-controller="OrganizationUnitInfoController">
+
+
+  <script type="text/ng-template" id="organization/add_employee.html">
+    <div class="modal-header">
+      <h3>
+        <span>Dodaj lekarza kierującego</span>
+      </h3>
+
+    </div>
+    <div class="modal-body">
+      <form class="form-horizontal">
+      
+        <div mt-form-part="pl.matsuo.core.model.message.NoteMessage">
+          <div mt-form-field="idParty" />
+        </div>
+
+        <div mt-form-part="pl.matsuo.core.model.organization.Person">
+          <div mt-form-field="firstName" />
+          <div mt-form-field="lastName" />
+          <div mt-form-field="sex" />
+          <div mt-form-field="pesel" />
+        </div>
+
+        <h5>Adres</h5>
+
+        <div mt-form-part="pl.matsuo.core.model.organization.Person">
+          <div mt-form-field="address.town" />
+          <div mt-form-field="address.zipCode" />
+          <div mt-form-field="address.gmina" />
+          <div mt-form-field="address.street" />
+          <div mt-form-field="address.houseNumber" />
+          <div mt-form-field="address.apartmentNumber" />
+        </div>
+
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button ng-click="close()" class="btn">Anuluj</button>
+      <button ng-click="save()" class="btn btn-primary">Dodaj</button>
+    </div>
+  </script>
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Dane firmy</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <table class="info-table">
+        <tr>
+          <td>Pełna nazwa:</td>
+          <td>{{ entity.fullName }}</td>
+        </tr>
+        <tr>
+          <td>Adres:</td>
+          <td ng-bind-html="entity.address | addressPresenter"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-4">
+      <table class="info-table">
+        <tr>
+          <td>NIP:</td>
+          <td>{{ entity.nip }}</td>
+        </tr>
+        <tr>
+          <td>REGON:</td>
+          <td>{{entity.regon}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-4">
+      <table class="info-table">
+        <tr>
+          <td>Status umowy:</td>
+          <td>
+            <span ng-show="serviceAgreement" class="label label-success">Aktywna</span>
+            <span ng-show="!serviceAgreement" class="label">Brak</span>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <hr class="before-tabs"/>
+    </div>
+  </div>
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <tabset type="pills">
+          <tab heading="{{tab.title}}" ng-repeat="tab in tabs">
+            <div ng-include="tab.src"></div>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>

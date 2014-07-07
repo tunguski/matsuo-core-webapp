@@ -1,0 +1,31 @@
+
+<div ng-controller="OrganizationUnitInfoEmployeesTabCtrl">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Lista pracowników</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-condensed table-hover table-striped">
+        <thead>
+        <tr>
+          <th>Imię i Nazwisko</th>
+          <th>Użytkownik systemu</th>
+          <th>Funckje</th>
+        </tr>
+        <thead>
+        <tbody>
+        <tr ng-repeat="employee in employees">
+          <th>{{ employee.firstName + ' ' + employee.lastName }}</th>
+          <th>{{ employee.userName }}</th>
+          <th></th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+

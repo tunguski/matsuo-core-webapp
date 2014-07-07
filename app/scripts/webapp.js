@@ -19,7 +19,7 @@ angular.module('mt.webapp', ['mt.ui'])
               { title: 'Magazyn', href: '#/storage/storage' }
             ]
           },
-          { title: 'Płatnicy', href: '#/organization/companies' },
+          { title: 'Płatnicy', href: '#/organization/organizationUnits' },
           { title: 'Numeracje', href: '#/numerations/numerations' },
           { title: 'Kasy', href: '#/cash/cashRegisters' }
         ]
@@ -39,6 +39,8 @@ angular.module('mt.webapp', ['mt.ui'])
           .define('AccessLog')
           .define('Numeration')
           .define('Payer')
+          .define("OrganizationUnit")
+          .define("ServiceAgreement")
           .define('User', {
             additionalFunctions: {
               changePassword: {

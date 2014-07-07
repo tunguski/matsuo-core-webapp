@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name mt.ui.controller:UserInfoPanelController
+ * @name mt.webapp.controller:UserInfoPanelController
  * @description
  * # UserInfoPanelController
- * Controller of the mt.ui
+ * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
     .controller('UserInfoPanelController', function ($scope, $rootScope, $http) {

@@ -26,7 +26,7 @@
           <td><a href="/#/organization/persons/{{user.person.id}}">{{user.person.firstName + " " + user.person.lastName}}</a></td>
           <td>{{user.lastLoginTime | date:'medium'}}</td>
           <td>{{ groups(user) }}</td>
-          <td><i ng-show="user.blocked" class="text-red icon-circle"></i></td>
+          <td><i ng-show="user.blocked" class="text-red fa-circle"></i></td>
           <td class="functions">
             <div class="btn-group inline hover-cond pull-right">
               <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Akcje <span class="caret"></span></a>

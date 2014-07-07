@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name mt.ui.controller:AccessLogListController
+ * @name mt.webapp.controller:AccessLogListController
  * @description
  * # AccessLogListController
- * Controller of the mt.ui
+ * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
     .controller('AccessLogListController', function ($scope, AccessLog, User) {

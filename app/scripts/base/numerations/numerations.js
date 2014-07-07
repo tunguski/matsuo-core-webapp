@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name mt.ui.controller:NumerationsController
+ * @name mt.webapp.controller:NumerationsController
  * @description
  * # NumerationsController
- * Controller of the mt.ui
+ * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
     .controller('NumerationsController', function NumerationsController($scope, $routeParams, $http, Numeration) {

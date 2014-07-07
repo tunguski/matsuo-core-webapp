@@ -1,0 +1,27 @@
+<div ng-controller="PersonsController" class="tab-pane" id="tab-person-search">
+  <div id="form.persons" class="search-pane">
+
+    <div simple-search query="query" />
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-condensed table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Imię i Nazwisko</th>
+              <th>Data urodzenia</th>
+              <th>PESEL</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="person in persons">
+              <td>{{person.firstName + " " + person.lastName}}</td>
+              <td>{{person.birthDate | formatDate}}</td>
+              <td>{{person.pesel}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>     
+  </div>
+</div>

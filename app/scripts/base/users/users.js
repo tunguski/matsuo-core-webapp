@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mt.ui.controller:UserListController
+ * @name mt.webapp.controller:UserListController
  * @description
  * # UserListController
- * Controller of the mt.ui
+ * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('UserListController', function UserListController($scope, $http, $dialog, User) {
+    .controller('UserListController', function ($scope, $http, $dialog, User) {
       $scope.setTitle('Zarządzanie użytkownikami');
 
       $scope.refreshListing = function() {
@@ -47,12 +47,12 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.ui.controller:AddUserController
+     * @name mt.webapp.controller:AddUserController
      * @description
      * # AddUserController
-     * Controller of the mt.ui
+     * Controller of the mt.webapp
      */
-    .controller('AddUserController', function AddUserController($scope, $dialog, $modalInstance, User) {
+    .controller('AddUserController', function ($scope, $dialog, $modalInstance, User) {
       $scope.entity = new User({
         person: {
           address: {}
@@ -72,10 +72,10 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.ui.controller:EditUserController
+     * @name mt.webapp.controller:EditUserController
      * @description
      * # EditUserController
-     * Controller of the mt.ui
+     * Controller of the mt.webapp
      */
     .controller('EditUserController', function ($scope, $dialog, $modalInstance) {
       $scope.entity = $modalInstance.values.user;
@@ -93,10 +93,10 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.ui.service:abstractChangePasswordController
+     * @name mt.webapp.service:abstractChangePasswordController
      * @description
      * # abstractChangePasswordController
-     * Service of the mt.ui
+     * Service of the mt.webapp
      */
     .service('abstractChangePasswordController', function ($http, validationService) {
       return function ($scope, $modalInstance, url) {
@@ -121,10 +121,10 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.ui.controller:ChangePasswordController
+     * @name mt.webapp.controller:ChangePasswordController
      * @description
      * # ChangePasswordController
-     * Controller of the mt.ui
+     * Controller of the mt.webapp
      */
     .controller('ChangePasswordController', function ($scope, $http, validationService, $modalInstance,
                                                       abstractChangePasswordController) {
@@ -132,10 +132,10 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.ui.controller:ChangeOwnPasswordController
+     * @name mt.webapp.controller:ChangeOwnPasswordController
      * @description
      * # ChangeOwnPasswordController
-     * Controller of the mt.ui
+     * Controller of the mt.webapp
      */
     .controller('ChangeOwnPasswordController', function ($scope, $http, validationService, $modalInstance,
                                                          abstractChangePasswordController) {

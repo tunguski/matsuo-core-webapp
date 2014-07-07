@@ -1,0 +1,33 @@
+
+<div ng-controller="OrganizationUnitInfoEmployeesTabCtrl">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Lista projektów</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-condensed table-hover table-striped">
+        <thead>
+        <tr>
+          <th>Nazwa</th>
+          <th>Utworzony</th>
+          <th>Edytowany</th>
+          <th>Funckje</th>
+        </tr>
+        <thead>
+        <tbody>
+        <tr ng-repeat="project in projects">
+          <th>{{ project.name }}</th>
+          <th>{{ project.createdTime }}</th>
+          <th>{{ project.modifiedTime }}</th>
+          <th></th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+

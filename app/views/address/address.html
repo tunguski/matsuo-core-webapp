@@ -1,31 +1,25 @@
-
-<%@page import="pl.matsuo.core.model.organization.Person"%>
-<%@page import="pl.matsuo.core.web.view.BootstrapRenderer"%>
-<%!  
-  BootstrapRenderer renderer = BootstrapRenderer.renderer();
-  //String type = request.getParameter("type");
-%>
-
 <div class="row">
   <div class="col-md-12">
     <h4>Adres</h4>
   </div>
-  
+
   <div class="col-md-6">
-    <%= renderer.create(Person.class).render(
-        "address.town",
-        "address.zipCode",
-        "address.gmina",
-        "address.street",
-        "address.houseNumber",
-        "address.apartmentNumber") %>
+    <div mt-form-part="pl.matsuo.core.model.organization.Person">
+      <div mt-form-field="address.town" />
+      <div mt-form-field="address.zipCode" />
+      <div mt-form-field="address.gmina" />
+      <div mt-form-field="address.street" />
+      <div mt-form-field="address.houseNumber" />
+      <div mt-form-field="address.apartmentNumber" />
+    </div>
   </div>
   
   <div class="col-md-6">
-    <%= renderer.create(Person.class).render(
-        "address.phone",
-        "address.country",
-        "address.email",
-        "address.comment") %>
+    <div mt-form-part="pl.matsuo.core.model.organization.Person">
+      <div mt-form-field="address.phone" />
+      <div mt-form-field="address.country" />
+      <div mt-form-field="address.email" />
+      <div mt-form-field="address.comment" />
+    </div>
   </div>
 </div>
