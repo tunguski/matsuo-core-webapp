@@ -1,0 +1,59 @@
+<div class="create-account form-horizontal">
+  <form name="createAccountForm">
+    <div class="modal-header">
+      <h4>Nowe konto</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <legend>Dane użytkownika</legend>
+          </div>
+        </div>
+
+            <div id="login" class="form-group">
+              <label class="control-label col-xs-4 {{errorClass}}" for="entity_login">Login (email)</label>
+              <div class="col-xs-6">
+                <input class="form-control" id="entity_login" type="text" name="login" ng-model="loginData.username">
+              </div>
+            </div>
+
+            <div id="password" class="form-group">
+              <label class="control-label col-xs-4 {{errorClass}}" for="entity_password">Hasło</label>
+              <div class="col-xs-6">
+                <input class="form-control" id="entity_password" type="password" name="password" ng-model="loginData.password">
+              </div>
+            </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <legend>Dane firmy</legend>
+          </div>
+        </div>
+
+            <div id="companyname" class="form-group">
+              <label class="control-label col-xs-4 {{errorClass}}" for="company_name">Nazwa</label>
+              <div class="col-xs-6">
+                <input class="form-control" id="company_name" type="text" name="companyname" ng-model="loginData.companyName">
+              </div>
+            </div>
+
+            <div id="companyshortname" class="form-group">
+              <label class="control-label col-xs-4 {{errorClass}}" for="company_short_name">Skrót</label>
+              <div class="col-xs-6">
+                <input class="form-control" id="company_short_name" name="companyshortname" ng-model="loginData.companyShortName">
+              </div>
+            </div>
+
+            <div id="companynip" class="form-group">
+              <label class="control-label col-xs-4 {{errorClass}}" for="company_nip">NIP</label>
+              <div class="col-xs-6">
+                <input class="form-control" id="company_nip" name="companynip" ng-model="loginData.companyNip">
+              </div>
+            </div>
+    </div>
+    <div class="modal-footer">
+      <a ng-click="close()" class="btn btn-default">Powrót do logowania</a>
+      <a type="submit" ng-click="createAccount(createAccountForm.$valid)" class="btn btn-primary">Załóż konto</a>
+    </div>
+  </form>
+</div>

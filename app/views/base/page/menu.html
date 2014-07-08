@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" ng-href="{{homeLink}}">Matsuo Core App</a>
+      <a class="navbar-brand" ng-click="homeLink()">Matsuo Core App</a>
     </div>
 
     <div class="collapse navbar-collapse" collapse="isCollapsed">
@@ -38,7 +38,7 @@
 
       <ul class="nav navbar-nav navbar-right loginfo">
         <li class="dropdown">
-          <a class="dropdown-toggle login" href="#">{{ user.person.firstName + ' ' + user.person.lastName }}<i class="caret"></i></a>
+          <a class="dropdown-toggle login" href="#">{{ displayUser() }}<i class="caret"></i></a>
           <div ng-controller="UserInfoPanelCtrl" class="dropdown-menu complex-menu">
             <span ng-include="'/views/base/user_info_panel.html'"></span>
           </div>
