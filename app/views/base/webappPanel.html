@@ -1,0 +1,43 @@
+
+<div ng-controller="WebPanelCtrl" class="search-pane">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="flot flot-height-100" flot-chart="optionsForFlot" ng-model="flotChartData"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div rounded-icon-box></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="chart">
+        <div class="percentage easyPieChart" easypiechart options="firstOptions" percent="firstPercent">
+          <span>{{ firstPercent }}</span>
+        </div>
+        <div class="title">Title first</div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="chart">
+        <div class="percentage easyPieChart" easypiechart options="secondOptions" percent="secondPercent">
+          <span>{{ secondPercent }}</span>
+        </div>
+        <div class="title">Title second</div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="chart">
+        <div class="percentage easyPieChart" easypiechart options="thirdOptions" percent="thirdPercent">
+          <span>{{ thirdPercent }}</span>
+        </div>
+        <div class="title">Title third</div>
+      </div>
+    </div>
+  </div>
+</div>
+

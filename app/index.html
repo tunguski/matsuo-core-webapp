@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles/html.css">
     <link rel="stylesheet" href="styles/bootstrap-modifications.css">
     <link rel="stylesheet" href="styles/matsuo-core.css">
+    <link rel="stylesheet" href="styles/jquery.easy-pie-chart.css">
     <!-- endbuild -->
 
     <title ng-bind-html="title">Matsuo-Core App</title>
@@ -76,12 +77,20 @@
 
 
     <!-- build:js(app/../) scripts/vendor.js -->
-    <!-- bower:js -->
+    <!-- _bower:js -->
+    <!-- _endbower -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/toastr/toastr.js"></script>
-    <!-- endbower -->
+
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/select2/select2.js"></script>
+    <script src="../bower_components/jquery.easy-pie-chart/dist/easypiechart.js"></script>
+    <script src="../bower_components/flot/jquery.flot.js"></script>
+
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="../bower_components/angular-resource/angular-resource.js"></script>
@@ -91,11 +100,7 @@
     <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/angular-ui-select2/src/select2.js"></script>
-
-    <script src="../bower_components/moment/moment.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
-    <script src="../bower_components/select2/select2.js"></script>
+    <script src="../bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js"></script>
 
     <script src="../bower_components/matsuo-js-util/matsuo-js-util.js"></script>
     <script src="../bower_components/matsuo-ng-route/matsuo-ng-route.js"></script>
@@ -126,6 +131,10 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/webapp.js"></script>
+    <script src="scripts/test/webapp.configuration.js"></script>
+    <script src="scripts/directives/flotChart.js"></script>
+    <script src="scripts/directives/roundedIconBox.js"></script>
+    <script src="scripts/controllers/webPanel.js"></script>
 
     <script src="scripts/base/contact/mail.js"></script>
     <script src="scripts/base/contact/sms.js"></script>

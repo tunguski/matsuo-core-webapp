@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mt.webapp', ['mt.ui'])
+angular.module('mt.webapp', ['mt.ui', 'easypiechart'])
     .run(function (menuService) {
       menuService.menu.length = 0;
       menuService.menu.push({
