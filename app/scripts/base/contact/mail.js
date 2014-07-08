@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:MailController
+ * @name mt.webapp.controller:MailCtrl
  * @description
- * # MailController
+ * # MailCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('MailController', function ($scope, $http, $timeout, validationService,  MailMessage) {
+    .controller('MailCtrl', function ($scope, $http, $timeout, validationService,  MailMessage) {
 
 
       $scope.setTitle("Wyślij maila");

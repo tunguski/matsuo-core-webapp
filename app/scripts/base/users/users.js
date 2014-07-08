@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:UserListController
+ * @name mt.webapp.controller:UserListCtrl
  * @description
- * # UserListController
+ * # UserListCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('UserListController', function ($scope, $http, $dialog, User) {
+    .controller('UserListCtrl', function ($scope, $http, $dialog, User) {
       $scope.setTitle('Zarządzanie użytkownikami');
 
       $scope.refreshListing = function() {
@@ -30,9 +30,9 @@ angular.module('mt.webapp')
         };
       }
 
-      $scope.addUser = openUserDialog('/views/management/modal/addUser.html', 'AddUserController');
-      $scope.editUser = openUserDialog('/views/management/modal/editUser.html', 'EditUserController');
-      $scope.changePassword = openUserDialog('/views/management/modal/changePassword.html', 'ChangePasswordController');
+      $scope.addUser = openUserDialog('/views/management/modal/addUser.html', 'AddUserCtrl');
+      $scope.editUser = openUserDialog('/views/management/modal/editUser.html', 'EditUserCtrl');
+      $scope.changePassword = openUserDialog('/views/management/modal/changePassword.html', 'ChangePasswordCtrl');
       $scope.blockUser = function (user) {
         $http.put('/api/users/blockUser', {
           id: user.id,
@@ -47,12 +47,12 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:AddUserController
+     * @name mt.webapp.controller:AddUserCtrl
      * @description
-     * # AddUserController
+     * # AddUserCtrl
      * Controller of the mt.webapp
      */
-    .controller('AddUserController', function ($scope, $dialog, $modalInstance, User) {
+    .controller('AddUserCtrl', function ($scope, $dialog, $modalInstance, User) {
       $scope.entity = new User({
         person: {
           address: {}
@@ -72,12 +72,12 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:EditUserController
+     * @name mt.webapp.controller:EditUserCtrl
      * @description
-     * # EditUserController
+     * # EditUserCtrl
      * Controller of the mt.webapp
      */
-    .controller('EditUserController', function ($scope, $dialog, $modalInstance) {
+    .controller('EditUserCtrl', function ($scope, $dialog, $modalInstance) {
       $scope.entity = $modalInstance.values.user;
 
       $dialog.saveAndCancelFn($scope, $modalInstance, {
@@ -93,12 +93,12 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.webapp.service:abstractChangePasswordController
+     * @name mt.webapp.service:abstractChangePasswordCtrl
      * @description
-     * # abstractChangePasswordController
+     * # abstractChangePasswordCtrl
      * Service of the mt.webapp
      */
-    .service('abstractChangePasswordController', function ($http, validationService) {
+    .service('abstractChangePasswordCtrl', function ($http, validationService) {
       return function ($scope, $modalInstance, url) {
         $scope.entity = {};
 
@@ -121,24 +121,24 @@ angular.module('mt.webapp')
     })
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:ChangePasswordController
+     * @name mt.webapp.controller:ChangePasswordCtrl
      * @description
-     * # ChangePasswordController
+     * # ChangePasswordCtrl
      * Controller of the mt.webapp
      */
-    .controller('ChangePasswordController', function ($scope, $http, validationService, $modalInstance,
-                                                      abstractChangePasswordController) {
-      abstractChangePasswordController($scope, $modalInstance, '/api/users/changePassword');
+    .controller('ChangePasswordCtrl', function ($scope, $http, validationService, $modalInstance,
+                                                      abstractChangePasswordCtrl) {
+      abstractChangePasswordCtrl($scope, $modalInstance, '/api/users/changePassword');
     })
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:ChangeOwnPasswordController
+     * @name mt.webapp.controller:ChangeOwnPasswordCtrl
      * @description
-     * # ChangeOwnPasswordController
+     * # ChangeOwnPasswordCtrl
      * Controller of the mt.webapp
      */
-    .controller('ChangeOwnPasswordController', function ($scope, $http, validationService, $modalInstance,
-                                                         abstractChangePasswordController) {
-      abstractChangePasswordController($scope, $modalInstance, '/api/users/changeOwnPassword');
+    .controller('ChangeOwnPasswordCtrl', function ($scope, $http, validationService, $modalInstance,
+                                                         abstractChangePasswordCtrl) {
+      abstractChangePasswordCtrl($scope, $modalInstance, '/api/users/changeOwnPassword');
     });
 

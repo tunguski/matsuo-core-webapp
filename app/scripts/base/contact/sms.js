@@ -3,13 +3,13 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:SmsController
+ * @name mt.webapp.controller:SmsCtrl
  * @description
- * # SmsController
+ * # SmsCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('SmsController', function SmsController($scope, $http, validationService, SmsMessage) {
+    .controller('SmsCtrl', function SmsCtrl($scope, $http, validationService, SmsMessage) {
 
       $scope.setTitle("Wyślij sms");
       $scope.entity = new SmsMessage();

@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:AccessLogListController
+ * @name mt.webapp.controller:AccessLogListCtrl
  * @description
- * # AccessLogListController
+ * # AccessLogListCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('AccessLogListController', function ($scope, AccessLog, User) {
+    .controller('AccessLogListCtrl', function ($scope, AccessLog, User) {
       $scope.setTitle("Logi dostępu");
 
       $scope.refresh = function () {

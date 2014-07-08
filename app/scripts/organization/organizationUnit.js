@@ -9,14 +9,14 @@ angular.module('mt.webapp')
 
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:OrganizationUnitInfoController
+     * @name mt.webapp.controller:OrganizationUnitInfoCtrl
      * @description
-     * # OrganizationUnitInfoController
+     * # OrganizationUnitInfoCtrl
      * Controller of the mt.webapp
      */
-    .controller('OrganizationUnitInfoController', function ($scope, $routeParams, $http, $dialog, organizationUnitTabs,
+    .controller('OrganizationUnitInfoCtrl', function ($scope, $routeParams, $http, $dialog, organizationUnitTabs,
         OrganizationUnit) {
-      $scope.setTitle("<span><span class='comment'>Firma</span> \"{{entity.fullName}}\"</span>", $scope);
+      $scope.setTitle('<span><span class="comment">Firma</span> "{{entity.fullName}}"</span>', $scope);
       $scope.tabs = organizationUnitTabs;
 
       $scope.refresh = function() {
@@ -33,13 +33,13 @@ angular.module('mt.webapp')
       $scope.addEmployee = function() {
         $dialog.dialog({
           templateUrl:  'organization/add_employee.html',
-          controller: 'AddEmployeeController',
+          controller: 'AddEmployeeCtrl',
           updated: $scope.updated
         }, function(result) {
           if(result.result === 'OK') {
             $http.post('/api/organizationUnits/' + $scope.entity.id + '/employee/' + result.entity.id).success(
               function (entity) {
-                toastr.success("Dodano pracownika");
+                toastr.success('Dodano pracownika');
                 $scope.refresh();
               });
           }
@@ -49,7 +49,7 @@ angular.module('mt.webapp')
       $scope.removeEmployee = function(employee) {
         $http['delete']('/api/organizationUnits/' + $scope.entity.id + '/employee/' + employee.id).success(
             function (entity) {
-              toastr.success("Usunięto pracownika");
+              toastr.success('Usunięto pracownika');
               $scope.refresh();
             });
       };
@@ -58,12 +58,12 @@ angular.module('mt.webapp')
 
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:AddEmployeeController
+     * @name mt.webapp.controller:AddEmployeeCtrl
      * @description
-     * # AddEmployeeController
+     * # AddEmployeeCtrl
      * Controller of the mt.webapp
      */
-    .controller('AddEmployeeController', function ($scope, $modalInstance, Person) {
+    .controller('AddEmployeeCtrl', function ($scope, $modalInstance, Person) {
       $scope.entity = new Person();
 
       $scope.close = $modalInstance.close;
@@ -76,12 +76,12 @@ angular.module('mt.webapp')
             var id = lastUrlElement(headers);
             Person.get({ idPerson: id}, function (person) {
               $modalInstance.close({ result: 'OK', entity: person });
-            })
+            });
           });
         }
       };
 
-      initializeSelect2($scope, "entity.idPerson", "/api/persons", "person", { bindEntity: "entity" });
+      initializeSelect2($scope, 'entity.idPerson', '/api/persons', 'person', { bindEntity: 'entity' });
     })
 
     /**

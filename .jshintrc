@@ -21,6 +21,10 @@
   "globals": {
     "angular": false,
     "moment": false,
-    "_": false
+    "_": false,
+    "searchQueryFunction": false,
+    "toastr": false,
+    "lastUrlElement": false,
+    "initializeSelect2": false
   }
 }

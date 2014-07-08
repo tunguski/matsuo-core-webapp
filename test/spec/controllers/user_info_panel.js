@@ -1,7 +1,7 @@
 'use strict';
 
 
-describe('Controller: UserInfoPanelController', function () {
+describe('Controller: UserInfoPanelCtrl', function () {
 
   angular.module('mt.webapp')
       .config(function (mtRouteConfig) {
@@ -11,7 +11,7 @@ describe('Controller: UserInfoPanelController', function () {
   // load the controller's module
   beforeEach(module('mt.webapp'));
 
-  var UserInfoPanelController,
+  var UserInfoPanelCtrl,
     rootScope,
     scope,
     http;
@@ -21,7 +21,7 @@ describe('Controller: UserInfoPanelController', function () {
     scope = $rootScope.$new();
     http = $httpBackend;
     rootScope = $rootScope;
-    UserInfoPanelController = $controller('UserInfoPanelController', {
+    UserInfoPanelCtrl = $controller('UserInfoPanelCtrl', {
       $scope: scope
     });
   }));

@@ -38,8 +38,8 @@ angular.module('mt.webapp', ['mt.ui'])
           .define('AccessLog')
           .define('Numeration')
           .define('Payer')
-          .define("OrganizationUnit")
-          .define("ServiceAgreement")
+          .define('OrganizationUnit')
+          .define('ServiceAgreement')
           .define('User', {
             additionalFunctions: {
               changePassword: {

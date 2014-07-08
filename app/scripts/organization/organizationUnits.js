@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:OrganizationUnitsController
+ * @name mt.webapp.controller:OrganizationUnitsCtrl
  * @description
- * # OrganizationUnitsController
+ * # OrganizationUnitsCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('OrganizationUnitsController', function ($scope, $http, $dialog, OrganizationUnit) {
-      $scope.setTitle("Firmy");
+    .controller('OrganizationUnitsCtrl', function ($scope, $http, $dialog, OrganizationUnit) {
+      $scope.setTitle('Firmy');
 
 
       $scope.organizationUnitsWatchers = [];
@@ -29,11 +29,11 @@ angular.module('mt.webapp')
       $scope.addOrganizationUnit = function() {
         $dialog.dialog({
           templateUrl:  'organization/add_company.html',
-          controller: 'AddOrganizationUnitController',
+          controller: 'AddOrganizationUnitCtrl',
           updated: $scope.updated
         }, function(result) {
           if(result === 'OK') {
-            toastr.success("Dodano firmę");
+            toastr.success('Dodano firmę');
             $scope.refresh();
           }
         });
@@ -43,12 +43,12 @@ angular.module('mt.webapp')
 
     /**
      * @ngdoc function
-     * @name mt.webapp.controller:AddOrganizationUnitController
+     * @name mt.webapp.controller:AddOrganizationUnitCtrl
      * @description
-     * # AddOrganizationUnitController
-     * Controller of the mt.webapp
+     * # AddOrganizationUnitCtrl
+     * Ctrl of the mt.webapp
      */
-    .controller('AddOrganizationUnitController', function ($scope, $dialog, $modalInstance, OrganizationUnit) {
+    .controller('AddOrganizationUnitCtrl', function ($scope, $dialog, $modalInstance, OrganizationUnit) {
       $scope.entity = new OrganizationUnit();
 
       $dialog.saveAndCancelFn($scope, $modalInstance);

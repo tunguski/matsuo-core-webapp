@@ -6,7 +6,7 @@ describe('Controller: ', function () {
   // load the controller's module
   beforeEach(module('mt.webapp'));
 
-  var AccessLogListController,
+  var AccessLogListCtrl,
     scope,
     http;
 
@@ -14,7 +14,7 @@ describe('Controller: ', function () {
   beforeEach(inject(function ($controller, $rootScope, $httpBackend) {
     scope = $rootScope.$new();
     http = $httpBackend;
-    AccessLogListController = $controller('AccessLogListController', {
+    AccessLogListCtrl = $controller('AccessLogListCtrl', {
       $scope: scope
     });
   }));

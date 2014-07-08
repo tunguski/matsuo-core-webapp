@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:NumerationsController
+ * @name mt.webapp.controller:NumerationsCtrl
  * @description
- * # NumerationsController
+ * # NumerationsCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('NumerationsController', function NumerationsController($scope, $routeParams, $http, Numeration) {
+    .controller('NumerationsCtrl', function NumerationsCtrl($scope, $routeParams, $http, Numeration) {
 
       $scope.setTitle("Lista numeracji");
 

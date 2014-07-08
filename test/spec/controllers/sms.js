@@ -6,7 +6,7 @@ describe('Controller: ', function () {
   // load the controller's module
   beforeEach(module('mt.webapp'));
 
-  var SmsController,
+  var SmsCtrl,
     scope,
     http;
 
@@ -14,7 +14,7 @@ describe('Controller: ', function () {
   beforeEach(inject(function ($controller, $rootScope, $httpBackend) {
     scope = $rootScope.$new();
     http = $httpBackend;
-    SmsController = $controller('SmsController', {
+    SmsCtrl = $controller('SmsCtrl', {
       $scope: scope
     });
   }));

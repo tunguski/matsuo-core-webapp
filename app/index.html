@@ -28,7 +28,7 @@
     <title ng-bind-html="title">Matsuo-Core App</title>
   </head>
 
-  <body ng-controller="AppController">
+  <body ng-controller="AppCtrl">
 
     <!-- top menu -->
     <div ng-show="isLoggedIn()" role="navigation"
@@ -37,7 +37,7 @@
     </div>
 
     <!-- page title -->
-    <header id="overview" ng-show="isLoggedIn()" ng-controller="HeaderController" class="subhead hidden-on-startup">
+    <header id="overview" ng-show="isLoggedIn()" ng-controller="HeaderCtrl" class="subhead hidden-on-startup">
       <div class="container relative">
       <a href="javascript:;" onclick="window.history.back()" class="fa fa-reply back-link"></a>
         <h3 ng-bind-html="title"></h3>
@@ -46,7 +46,8 @@
     </header>
 
     <!-- login view -->
-    <div ng-show="isLoggedOff()" class="container login-panel" ng-include="'/views/login/login.html'">
+    <div ng-show="isLoggedOff()" ng-controller="LoginCtrl" class="container login-panel">
+      <div ng-include="'/views/login/login.html'"></div>
     </div>
 
     <!-- main panel (message panel + content panel) -->
@@ -103,9 +104,10 @@
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/ui.js"></script>
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/backbone.js"></script>
 
-    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/validation.js"></script>
-    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/permissions.js"></script>
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/dialog.js"></script>
+    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/menu.js"></script>
+    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/permissions.js"></script>
+    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/validation.js"></script>
 
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/directives/simple-search.js"></script>
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/directives/basic-format-elements.js"></script>
@@ -114,8 +116,10 @@
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/directives/form-element.js"></script>
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/directives/info-table.js"></script>
 
-    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/services/menu.js"></script>
+    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/controllers/app.js"></script>
+    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/controllers/header.js"></script>
     <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/controllers/menu.js"></script>
+    <script src="../bower_components/matsuo-ng-ui/app/scripts/mt.ui/controllers/remindPasswordDialog.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->

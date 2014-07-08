@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav navbar-right loginfo">
         <li class="dropdown">
           <a class="dropdown-toggle login" href="#">{{ user.person.firstName + ' ' + user.person.lastName }}<i class="caret"></i></a>
-          <div ng-controller="UserInfoPanelController" class="dropdown-menu complex-menu">
+          <div ng-controller="UserInfoPanelCtrl" class="dropdown-menu complex-menu">
             <span ng-include="'/views/base/user_info_panel.html'"></span>
           </div>
         </li>

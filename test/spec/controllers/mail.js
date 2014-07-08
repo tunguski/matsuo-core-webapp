@@ -6,13 +6,13 @@ describe('Controller: ', function () {
   // load the controller's module
   beforeEach(module('mt.webapp'));
 
-  var MailController,
+  var MailCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MailController = $controller('MailController', {
+    MailCtrl = $controller('MailCtrl', {
       $scope: scope
     });
   }));

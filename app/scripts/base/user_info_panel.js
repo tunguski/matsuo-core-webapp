@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mt.webapp.controller:UserInfoPanelController
+ * @name mt.webapp.controller:UserInfoPanelCtrl
  * @description
- * # UserInfoPanelController
+ * # UserInfoPanelCtrl
  * Controller of the mt.webapp
  */
 angular.module('mt.webapp')
-    .controller('UserInfoPanelController', function ($scope, $rootScope, $http) {
+    .controller('UserInfoPanelCtrl', function ($scope, $rootScope, $http) {
       $scope.loadLoginTime = function () {
         $http.get('/api/login/loginTime').success(function (time) {
           $scope.loginTime = moment(parseInt(time));

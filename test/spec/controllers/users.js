@@ -15,11 +15,11 @@ describe('Controllers: User', function () {
     http = $httpBackend;
   }));
 
-  describe('Controller: UserListController', function () {
+  describe('Controller: UserListCtrl', function () {
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope) {
       scope = $rootScope.$new();
-      ctrl = $controller('UserListController', {
+      ctrl = $controller('UserListCtrl', {
         $scope: scope
       });
     }));
@@ -68,11 +68,11 @@ describe('Controllers: User', function () {
   }
 
 
-  describe('Controller: AddUserController', function () {
+  describe('Controller: AddUserCtrl', function () {
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope) {
       scope = $rootScope.$new();
-      ctrl = $controller('AddUserController', {
+      ctrl = $controller('AddUserCtrl', {
         $scope: scope,
         $modalInstance: {
           close: function () {}
@@ -85,11 +85,11 @@ describe('Controllers: User', function () {
   });
 
 
-  describe('Controller: EditUserController', function () {
+  describe('Controller: EditUserCtrl', function () {
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope) {
       scope = $rootScope.$new();
-      ctrl = $controller('EditUserController', {
+      ctrl = $controller('EditUserCtrl', {
         $scope: scope,
         $modalInstance: {
           close: function () {},
@@ -105,14 +105,14 @@ describe('Controllers: User', function () {
   });
 
 
-  describe('Service: abstractChangePasswordController', function () {
+  describe('Service: abstractChangePasswordCtrl', function () {
 
-    var abstractChangePasswordController;
+    var abstractChangePasswordCtrl;
 
     // Initialize the controller and a mock scope
-    beforeEach(inject(function ($controller, $rootScope, _abstractChangePasswordController_) {
+    beforeEach(inject(function ($controller, $rootScope, _abstractChangePasswordCtrl_) {
       scope = $rootScope.$new();
-      abstractChangePasswordController = _abstractChangePasswordController_;
+      abstractChangePasswordCtrl = _abstractChangePasswordCtrl_;
     }));
 
     var $modalInstance = {
@@ -126,7 +126,7 @@ describe('Controllers: User', function () {
 
     it('save', function () {
       // $scope, $modalInstance, url
-      abstractChangePasswordController(scope, $modalInstance, '/api/test');
+      abstractChangePasswordCtrl(scope, $modalInstance, '/api/test');
       http.expectPUT('/api/test').respond('OK');
       scope.entity = { password: 'testPass' };
       scope.confirmationPassword = 'testPass';
@@ -137,7 +137,7 @@ describe('Controllers: User', function () {
 
     it('save incorrect', function () {
       // $scope, $modalInstance, url
-      abstractChangePasswordController(scope, $modalInstance, '/api/test');
+      abstractChangePasswordCtrl(scope, $modalInstance, '/api/test');
       scope.entity = { password: 'testPass' };
       scope.confirmationPassword = 'testPass2';
 
@@ -151,7 +151,7 @@ describe('Controllers: User', function () {
 
     it('close', function () {
       // $scope, $modalInstance, url
-      abstractChangePasswordController(scope, $modalInstance, '/api/test');
+      abstractChangePasswordCtrl(scope, $modalInstance, '/api/test');
 
       scope.close();
 
@@ -162,11 +162,11 @@ describe('Controllers: User', function () {
   });
 
 
-  describe('Controller: ChangePasswordController', function () {
+  describe('Controller: ChangePasswordCtrl', function () {
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope) {
       scope = $rootScope.$new();
-      ctrl = $controller('ChangePasswordController', {
+      ctrl = $controller('ChangePasswordCtrl', {
         $scope: scope,
         $modalInstance: {}
       });
@@ -179,11 +179,11 @@ describe('Controllers: User', function () {
   });
 
 
-  describe('Controller: ChangeOwnPasswordController', function () {
+  describe('Controller: ChangeOwnPasswordCtrl', function () {
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope) {
       scope = $rootScope.$new();
-      ctrl = $controller('ChangeOwnPasswordController', {
+      ctrl = $controller('ChangeOwnPasswordCtrl', {
         $scope: scope,
         $modalInstance: {}
       });
