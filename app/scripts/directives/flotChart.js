@@ -8,23 +8,29 @@ angular.module('mt.webapp')
      * # FlotChart
      * Directive of the mt.webapp
      */
-    .directive('flotChart', function() {
+    .directive('flotChart', function($timeout) {
       return {
         restrict: 'EA',
         link: function(scope, elem, attrs) {
           var data = scope[attrs.ngModel];
 
-          var chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+          var chart;
           elem.show();
+          $timeout(function () {
+            chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+          }, 100);
 
           scope.$watch(attrs.ngModel, function(v) {
             if (!chart) {
-              chart = $.plot(elem, v , scope[attrs.flotChart] || {});
-              elem.show();
+              $timeout(function () {
+                chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+              }, 100);
             } else {
               chart.setData(v);
               chart.setupGrid();
-              chart.draw();
+              $timeout(function () {
+                chart.draw();
+              }, 100);
             }
           });
         }

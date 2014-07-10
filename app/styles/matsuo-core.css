@@ -590,7 +590,9 @@ footer .company-title {
 
 .flot-height-100 {
   height: 200px;
-  width: 600px;
+  width: 100%;
+  padding: 0px;
+  position: relative;
 }
 
 .rounded-icon-box {

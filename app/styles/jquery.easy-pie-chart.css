@@ -21,25 +21,34 @@
   font-size: 140%;
 }
 
-.chart {
-  cursor: pointer;
-}
-
-.chart > div {
-  margin: auto;
-  margin-top: 10px;
+.chart-box {
   text-align: center;
 }
 
-.chart > .title,
-.chart span
+
+.chart-box > * {
+  cursor: pointer;
+}
+
+.chart-box > div {
+  width: 110px;
+  margin: auto;
+}
+
+.chart-box > div > div {
+  margin: auto;
+  margin-top: 10px;
+}
+
+.chart-box .title,
+.chart-box span
 {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-.chart:hover > .title,
-.chart:hover span
+.chart-box > div:hover > .title,
+.chart-box > div:hover span
 {
   color: deepskyblue;
 }
