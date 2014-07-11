@@ -38,6 +38,7 @@ angular.module('mt.webapp', ['mt.ui', 'easypiechart'])
           .define('AccessLog')
           .define('Numeration')
           .define('Payer')
+          .define('Person')
           .define('OrganizationUnit')
           .define('ServiceAgreement')
           .define('User', {

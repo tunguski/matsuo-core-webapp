@@ -31,12 +31,11 @@ angular.module('mt.webapp')
       $scope.refresh();
 
       $scope.addEmployee = function() {
-        $dialog.dialog({
+        return $dialog.dialog({
           templateUrl:  'organization/add_employee.html',
-          controller: 'AddEmployeeCtrl',
-          updated: $scope.updated
+          controller: 'AddEmployeeCtrl'
         }, function(result) {
-          if(result.result === 'OK') {
+          if (result.result === 'OK') {
             $http.post('/api/organizationUnits/' + $scope.entity.id + '/employee/' + result.entity.id).success(
               function (entity) {
                 toastr.success('Dodano pracownika');

@@ -11,11 +11,29 @@ angular.module('mt.webapp')
     .controller('WebPanelCtrl', function ($scope, $http, $dialog, OrganizationUnit) {
       $scope.setTitle('Panel testowy');
 
-      $scope.flotChartData = [[[0, 1], [1, 5], [2, 2]]];
+      $scope.flotChartData = [[
+        [0, 1], [1, 5], [2, 23],
+        [3, 1], [4, 57], [5, 2]
+      ]];
       $scope.optionsForFlot = {
         series: {
           lines: { show: true },
           points: { show: true }
+        }
+      };
+
+      $scope.flotChartData2 = [[ ['January', 10], ['February', 8], ['March', 4], ['April', 13], ['May', 17], ['June', 9] ]];
+      $scope.optionsForFlot2 = {
+        series: {
+          bars: {
+            show: true,
+            barWidth: 0.6,
+            align: 'center'
+          }
+        },
+        xaxis: {
+          mode: 'categories',
+          tickLength: 0
         }
       };
 
@@ -54,6 +72,4 @@ angular.module('mt.webapp')
         lineWidth:4,
         lineCap:'circle'
       };
-
-
     });
