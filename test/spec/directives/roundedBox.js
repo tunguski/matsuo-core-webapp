@@ -18,7 +18,7 @@ describe('Directive: roundedBox', function () {
 
 
   it('', function () {
-    var template = $compile("<div rounded-icon-box></div>")(scope);
+    var template = $compile('<div rounded-icon-box></div>')(scope);
 
     $http.expectGET('/views/templates/roundedIconBox.html').respond('');
 

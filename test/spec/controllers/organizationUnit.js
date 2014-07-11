@@ -26,7 +26,6 @@ describe('Controller: ', function () {
         id: 7
       };
 
-      var modalInstance = scope.addEmployee();
       scope.removeEmployee({ id: 11 });
 
       expect().toBe();
