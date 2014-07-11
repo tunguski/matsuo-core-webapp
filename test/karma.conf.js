@@ -28,6 +28,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js',
       'bower_components/angular-ui-select2/src/select2.js',
 
+      'bower_components/jquery.easy-pie-chart/dist/easypiechart.js',
       'bower_components/matsuo-js-util/matsuo-js-util.js',
       'bower_components/matsuo-ng-route/matsuo-ng-route.js',
       'bower_components/matsuo-ng-resource/matsuo-ng-resource.js',
@@ -35,6 +36,7 @@ module.exports = function(config) {
       'bower_components/matsuo-ng-ui/app/scripts/mt.ui/*.js',
       'bower_components/matsuo-ng-ui/app/scripts/mt.ui/**/*.js',
 
+      'bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js',
       'bower_components/angular-mocks/angular-mocks.js',
 
       'app/scripts/webapp.js',
