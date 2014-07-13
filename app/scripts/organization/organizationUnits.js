@@ -28,7 +28,7 @@ angular.module('mt.webapp')
 
       $scope.addOrganizationUnit = function() {
         $dialog.dialog({
-          templateUrl:  'organization/add_company.html',
+          templateUrl:  'views/organization/add_company.html',
           controller: 'AddOrganizationUnitCtrl',
           updated: $scope.updated
         }, function(result) {
@@ -49,7 +49,7 @@ angular.module('mt.webapp')
      * Ctrl of the mt.webapp
      */
     .controller('AddOrganizationUnitCtrl', function ($scope, $dialog, $modalInstance, OrganizationUnit) {
-      $scope.entity = new OrganizationUnit();
+      $scope.entity = $modalInstance.values.entity ? $modalInstance.values.entity : new OrganizationUnit();
 
       $dialog.saveAndCancelFn($scope, $modalInstance);
     });

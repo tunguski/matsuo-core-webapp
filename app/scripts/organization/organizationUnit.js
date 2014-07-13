@@ -52,6 +52,19 @@ angular.module('mt.webapp')
               $scope.refresh();
             });
       };
+
+      $scope.editCompany = function() {
+        return $dialog.dialog({
+          templateUrl:  'views/organization/add_company.html',
+          controller: 'AddOrganizationUnitCtrl',
+          entity: $scope.entity
+        }, function(result) {
+          if(result === 'OK') {
+            toastr.success('Zapisano zmiany danych firmy');
+            $scope.refresh();
+          }
+        });
+      };
     })
 
 

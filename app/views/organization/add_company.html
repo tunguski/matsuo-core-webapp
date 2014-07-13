@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h3>Dodaj firmę</h3>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal">
+
+    <div mt-form-part="pl.matsuo.core.model.organization.OrganizationUnit">
+      <div mt-form-field="fullName" />
+      <div mt-form-field="shortName" />
+      <div mt-form-field="code" />
+      <div mt-form-field="nip" />
+    </div>
+
+    <h4 class="comment">Adres</h4>
+
+    <div mt-form-part="pl.matsuo.core.model.organization.OrganizationUnit">
+      <div mt-form-field="address.town" />
+      <div mt-form-field="address.zipCode" />
+      <div mt-form-field="address.gmina" />
+      <div mt-form-field="address.street" />
+    </div>
+
+    <div mt-form-part="pl.matsuo.core.model.organization.OrganizationUnit" mtf-inline="true">
+      <div mt-form-field="address.houseNumber" />
+      <div mt-form-field="address.apartmentNumber" />
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button ng-click="close()" class="btn btn-default" translate="cancel"></button>
+  <button ng-click="save()" class="btn btn-primary" translate="add"></button>
+</div>
