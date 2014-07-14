@@ -17,7 +17,7 @@ angular.module('mt.webapp')
           $timeout(function () {
             var data = scope.$eval(attrs.ngModel);
             if (data) {
-              chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+              chart = $.plot(elem, data, scope.$eval(attrs.flotChart) || {});
             }
           }, 100);
 
@@ -25,7 +25,7 @@ angular.module('mt.webapp')
             if (!chart) {
               $timeout(function () {
                 if (n) {
-                  chart = $.plot(elem, n, scope[attrs.flotChart] || {});
+                  chart = $.plot(elem, n, scope.$eval(attrs.flotChart) || {});
                 }
               }, 100);
             } else {
