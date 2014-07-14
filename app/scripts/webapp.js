@@ -39,6 +39,7 @@ angular.module('mt.webapp', ['mt.ui', 'easypiechart'])
           .define('Numeration')
           .define('Payer')
           .define('Person')
+          .define('Print')
           .define('OrganizationUnit')
           .define('User', {
             additionalFunctions: {
