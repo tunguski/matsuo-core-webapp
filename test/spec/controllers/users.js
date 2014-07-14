@@ -29,14 +29,14 @@ describe('Controllers: User', function () {
     });
 
     it('addUser', function () {
-      http.expectGET('/api/users').respond('[{}]');
+      http.expectGET('/api/users').respond([{}]);
       http.expectGET('/views/management/modal/addUser.html').respond('<div></div>');
 
       var modal = scope.addUser({});
 
       http.flush();
 
-      http.expectGET('/api/users').respond('[{}]');
+      http.expectGET('/api/users').respond([{}]);
 
       modal.close('OK');
 
@@ -44,11 +44,11 @@ describe('Controllers: User', function () {
     });
 
     it('blockUser', function () {
-      http.expectGET('/api/users').respond('[{}]');
+      http.expectGET('/api/users').respond([{}]);
       scope.$digest();
       http.flush();
 
-      http.expectPUT('/api/users/blockUser').respond('[{}]');
+      http.expectPUT('/api/users/blockUser').respond([{}]);
 
       scope.blockUser({});
 
@@ -57,7 +57,7 @@ describe('Controllers: User', function () {
     });
 
     it('blockUser error', function () {
-      http.expectGET('/api/users').respond('[{}]');
+      http.expectGET('/api/users').respond([{}]);
       scope.$digest();
       http.flush();
 

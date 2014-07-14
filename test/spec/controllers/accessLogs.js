@@ -19,13 +19,13 @@ describe('Controller: ', function () {
 
   it('refresh', function () {
 
-    http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
-    http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
+    http.expectGET('/api/accessLogs').respond([{ status: 'ok' }]);
+    http.expectGET('/api/accessLogs').respond([{ status: 'ok' }]);
 
     scope.$digest();
     http.flush();
 
-    http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
+    http.expectGET('/api/accessLogs').respond([{ status: 'ok' }]);
 
     scope.refresh();
 

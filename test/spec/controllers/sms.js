@@ -23,7 +23,7 @@ describe('Controller: ', function () {
   it('save', function () {
     scope.selectedParties = [];
 
-    http.expectPOST('/api/smsMessages/multiMessage').respond('{}');
+    http.expectPOST('/api/smsMessages/multiMessage').respond({});
     scope.save();
     scope.$digest();
     http.flush();
