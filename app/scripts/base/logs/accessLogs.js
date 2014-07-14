@@ -11,10 +11,6 @@ angular.module('mt.webapp')
     .controller('AccessLogListCtrl', function ($scope, AccessLog, User) {
       $scope.setTitle("Logi dostępu");
 
-      $scope.refresh = function () {
-        loadAndInject($scope.accessLogs, User, "user", "id");
-      }
-
       searchQueryFunction($scope, AccessLog, {
         afterLoadFn: function (accessLogs) {
           $scope.accessLogs = accessLogs;

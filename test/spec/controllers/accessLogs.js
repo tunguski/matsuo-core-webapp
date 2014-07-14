@@ -14,23 +14,23 @@ describe('Controller: ', function () {
   beforeEach(inject(function ($controller, $rootScope, $httpBackend) {
     scope = $rootScope.$new();
     http = $httpBackend;
-    AccessLogListCtrl = $controller('AccessLogListCtrl', {
-      $scope: scope
-    });
+    AccessLogListCtrl = $controller('AccessLogListCtrl', { $scope: scope });
   }));
 
   it('refresh', function () {
 
     http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
     http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
-    http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
-
-    scope.refresh();
 
     scope.$digest();
     http.flush();
 
-    expect().toBe();
+    http.expectGET('/api/accessLogs').respond('[{ "status": "ok" }]');
+
+    scope.refresh();
+
+    http.flush();
+    http.verifyNoOutstandingRequest();
   });
 
   it('', function () {

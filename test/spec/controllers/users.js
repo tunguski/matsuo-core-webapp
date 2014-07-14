@@ -29,8 +29,18 @@ describe('Controllers: User', function () {
     });
 
     it('addUser', function () {
-      scope.addUser({});
-      expect().toBe();
+      http.expectGET('/api/users').respond('[{}]');
+      http.expectGET('/views/management/modal/addUser.html').respond('<div></div>');
+
+      var modal = scope.addUser({});
+
+      http.flush();
+
+      http.expectGET('/api/users').respond('[{}]');
+
+      modal.close('OK');
+
+      http.flush();
     });
 
     it('blockUser', function () {
@@ -42,10 +52,25 @@ describe('Controllers: User', function () {
 
       scope.blockUser({});
 
+      http.flush();
+      http.verifyNoOutstandingRequest();
+    });
+
+    it('blockUser error', function () {
+      http.expectGET('/api/users').respond('[{}]');
       scope.$digest();
       http.flush();
 
-      expect().toBe();
+      http.expectPUT('/api/users/blockUser').respond(401, 'error');
+
+      spyOn(toastr, 'error');
+
+      scope.blockUser({});
+
+      http.flush();
+
+      http.verifyNoOutstandingRequest();
+      expect(toastr.error).toHaveBeenCalledWith('Nieudana próba zmiany stanu blokady');
     });
   });
 

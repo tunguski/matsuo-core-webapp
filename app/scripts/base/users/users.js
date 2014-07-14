@@ -22,7 +22,7 @@ angular.module('mt.webapp')
 
       function openUserDialog(templateUrl, controller) {
         return function (user) {
-          $dialog.dialog({
+          return $dialog.dialog({
             templateUrl:  templateUrl,
             controller: controller,
             user: user
