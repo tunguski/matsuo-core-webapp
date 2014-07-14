@@ -40,7 +40,6 @@ angular.module('mt.webapp', ['mt.ui', 'easypiechart'])
           .define('Payer')
           .define('Person')
           .define('OrganizationUnit')
-          .define('ServiceAgreement')
           .define('User', {
             additionalFunctions: {
               changePassword: {

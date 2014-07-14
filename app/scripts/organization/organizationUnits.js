@@ -15,19 +15,11 @@ angular.module('mt.webapp')
       $scope.organizationUnitsWatchers = [];
 
 
-      searchQueryFunction($scope, OrganizationUnit, { listField: 'organizationUnits' ,
-        afterLoadFn: function (organizationUnits) {
-          $http.get('/api/serviceAgreements/list/byIdOrganizationUnits', { params: { ids: _.pluck(organizationUnits, 'id') } }).success(
-              function (serviceAgreements) {
-                angular.forEach(serviceAgreements, function (serviceAgreement) {
-                  _.findWhere(organizationUnits, { id: serviceAgreement.idPayer }).serviceAgreement = serviceAgreement;
-                });
-              });
-        }});
+      searchQueryFunction($scope, OrganizationUnit, { listField: 'organizationUnits' });
 
 
       $scope.addOrganizationUnit = function() {
-        $dialog.dialog({
+        return $dialog.dialog({
           templateUrl:  'views/organization/add_company.html',
           controller: 'AddOrganizationUnitCtrl',
           updated: $scope.updated

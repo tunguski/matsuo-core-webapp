@@ -47,7 +47,7 @@ angular.module('mt.webapp')
 
       $scope.removeEmployee = function(employee) {
         $http['delete']('/api/organizationUnits/' + $scope.entity.id + '/employee/' + employee.id).success(
-            function (entity) {
+            function () {
               toastr.success('Usunięto pracownika');
               $scope.refresh();
             });
@@ -59,7 +59,7 @@ angular.module('mt.webapp')
           controller: 'AddOrganizationUnitCtrl',
           entity: $scope.entity
         }, function(result) {
-          if(result === 'OK') {
+          if (result === 'OK') {
             toastr.success('Zapisano zmiany danych firmy');
             $scope.refresh();
           }
@@ -85,7 +85,7 @@ angular.module('mt.webapp')
           $modalInstance.close({ result: 'OK', entity: $scope.entity });
         } else {
           $scope.entity.$save(function (entity, headers) {
-            var id = lastUrlElement(headers);
+            var id = _.lastUrlElement(headers);
             Person.get({ idPerson: id}, function (person) {
               $modalInstance.close({ result: 'OK', entity: person });
             });
