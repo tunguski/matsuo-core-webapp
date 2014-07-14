@@ -22,19 +22,18 @@ angular.module('mt.webapp')
           }, 100);
 
           scope.$watch(attrs.ngModel, function(n) {
-            if (!chart) {
-              $timeout(function () {
-                if (n) {
-                  chart = $.plot(elem, n, scope.$eval(attrs.flotChart) || {});
-                }
-              }, 100);
-            } else {
-              chart.setData(n);
-              chart.setupGrid();
-              $timeout(function () {
-                chart.draw();
-              }, 100);
-            }
+            $timeout(function () {
+              if (n) {
+                chart = $.plot(elem, n, scope.$eval(attrs.flotChart) || {});
+              }
+            }, 100);
+            // version with redrawing same flot is buggy(?)
+//            if (!chart) {
+//            } else {
+//              chart.setData(n);
+//              chart.setupGrid();
+//              chart.draw();
+//            }
           });
         }
       };
