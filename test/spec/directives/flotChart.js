@@ -18,16 +18,18 @@ describe('Directive: flotChart', function () {
 
 
   it('', function () {
-    scope.flotOptions = {
-      series: {
-        lines: { show: true },
-        points: { show: true }
-      }
+    scope.stat = {
+        flotOptions: {
+          series: {
+            lines: { show: true },
+            points: { show: true }
+          }
+        },
+        flotData: [[ [0, 1], [1, 5], [2, 23] ]]
     };
-    scope.flotData = [[ [0, 1], [1, 5], [2, 23] ]];
 
     var template = $compile(
-        '<div style="width: 100px; height: 100px" flot-chart="flotOptions" ng-model="flotData"></div>')(scope);
+        '<div style="width: 100px; height: 100px" flot-chart="stat.flotOptions" ng-model="stat.flotData"></div>')(scope);
 
     scope.$digest();
     $timeout.flush();
@@ -35,7 +37,6 @@ describe('Directive: flotChart', function () {
     scope.flotData = [[ [0, 1], [1, 5], [2, 23], [3, 1], [4, 57], [5, 2] ]];
 
     scope.$digest();
-    $timeout.flush();
 
     var templateAsHtml = template.html();
 

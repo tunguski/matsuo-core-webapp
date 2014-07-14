@@ -12,21 +12,24 @@ angular.module('mt.webapp')
       return {
         restrict: 'EA',
         link: function(scope, elem, attrs) {
-          var data = scope[attrs.ngModel];
-
           var chart;
           elem.show();
           $timeout(function () {
-            chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+            var data = scope.$eval(attrs.ngModel);
+            if (data) {
+              chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+            }
           }, 100);
 
-          scope.$watch(attrs.ngModel, function(v) {
+          scope.$watch(attrs.ngModel, function(n) {
             if (!chart) {
               $timeout(function () {
-                chart = $.plot(elem, data, scope[attrs.flotChart] || {});
+                if (n) {
+                  chart = $.plot(elem, n, scope[attrs.flotChart] || {});
+                }
               }, 100);
             } else {
-              chart.setData(v);
+              chart.setData(n);
               chart.setupGrid();
               $timeout(function () {
                 chart.draw();
