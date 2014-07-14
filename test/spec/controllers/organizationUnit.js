@@ -124,7 +124,7 @@ describe('Controller: ', function () {
 
     it('save existing employee', function () {
       scope.entity = {
-        $save: function (fn) { fn({}, function () { return '/fasfada/13' }); }
+        $save: function (fn) { fn({}, function () { return '/fasfada/13'; }); }
       };
 
       $http.expectGET('/api/persons/13').respond('{ "id": 13 }');
