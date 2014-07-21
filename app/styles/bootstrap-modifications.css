@@ -101,7 +101,7 @@ div.modal .modal-footer {
 
 .navbar-inverse .search-query {
   background-color: #666;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
 .navbar-inverse .search-query:focus {
