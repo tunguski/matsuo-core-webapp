@@ -9,7 +9,7 @@
   line-height: 100px;
 }
 
-.login-panel .control-group {
+.login-panel .form-group {
   margin-top: 30px;
 }
 
@@ -180,8 +180,8 @@
   color: grey;
 }
 
-.info-form.form-horizontal .control-group {
-  margin-bottom: 0;
+.info-form.form-horizontal .form-group {
+  /*margin-bottom: 0;*/
 }
 
 .info-form input[readonly], .info-form input[disabled] {
@@ -425,8 +425,8 @@ div.full {
   margin-bottom: 25px;
 }
 
-.control-group[class*="houseNumber"] input.houseNumber,
-.control-group[class*="houseNumber"] input.apartmentNumber {
+.form-group[class*="houseNumber"] input.houseNumber,
+.form-group[class*="houseNumber"] input.apartmentNumber {
   width: 60px;
 }
 
@@ -548,9 +548,9 @@ footer .container {
 }
 
 footer .icons {
-  position: absolute;
-  top: 0;
-  right: 20px;
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*right: 20px;*/
 }
 
 footer .icons * {

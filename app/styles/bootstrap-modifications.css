@@ -139,7 +139,7 @@ div.modal .modal-footer {
     display: block;
   }
 
-  table.details-table tr td {
+  .nav table.details-table tr td {
     color: white;
   }
 }
