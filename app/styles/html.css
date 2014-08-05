@@ -21,6 +21,13 @@ body, input, button, select, textarea {
   -o-transition:      all 0.2s ease;
 }
 
+.btn-group, .btn-group * {
+  -webkit-transition: none;
+  -moz-transition:    none;
+  -ms-transition:     none;
+  -o-transition:      none;
+}
+
 @media (min-width: 992px) {
   body {
     background: url("../images/pattern-23s3.png");
