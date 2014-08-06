@@ -53,8 +53,8 @@
   color: deepskyblue;
 }
 
-.percentage,
-.label {
+.easyPieChart .percentage,
+.easyPieChart .label {
   text-align: center;
   color: #333;
   font-weight: 100;
