@@ -50,9 +50,12 @@ describe('Controller: UserInfoPanelCtrl', function () {
   });
 
   it('loggedIn event', function () {
+
     http.expectGET('/api/login/loginTime').respond('1393822800000');
     scope.$digest();
     http.flush();
+
+    http.expectPOST('/api/login/permissions').respond([]);
 
     http.expectGET('/api/login/loginTime').respond('1393822800000');
     rootScope.$emit('loggedIn');
