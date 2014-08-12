@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mt.webapp', ['mt.ui', 'easypiechart', 'nvd3ChartDirectives'])
+angular.module('mt.webapp', ['mt.ui', 'easypiechart', 'anvde'])
     .run(function (menuService) {
       menuService.menu.length = 0;
       menuService.menu.push({

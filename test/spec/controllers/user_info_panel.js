@@ -55,11 +55,10 @@ describe('Controller: UserInfoPanelCtrl', function () {
     scope.$digest();
     http.flush();
 
+    http.expectGET('/api/login/loginTime').respond('1393822800000');
     http.expectPOST('/api/login/permissions').respond([]);
 
-    http.expectGET('/api/login/loginTime').respond('1393822800000');
     rootScope.$emit('loggedIn');
-    scope.$digest();
     http.flush();
   });
 
