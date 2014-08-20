@@ -7,6 +7,7 @@ angular.module('mt.webapp')
       });
 
       $scope.datepickerOptions = {
-        format: 'dd-mm-yyyy'
+        format: 'dd-mm-yyyy',
+        momentFormat: 'DD-MM-yyyy'
       };
     });
