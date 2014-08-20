@@ -23,7 +23,7 @@
         <tbody>
         <tr ng-repeat="user in users | filter:query" class="hover-cond-visibility" ng-class="user.blocked ? 'comment' : ''">
           <td>{{user.username}}</td>
-          <td><a href="/#/organization/persons/{{user.person.id}}">{{user.person.firstName + " " + user.person.lastName}}</a></td>
+          <td><a href="/#/management/user/{{user.id}}">{{user.person.firstName + " " + user.person.lastName}}</a></td>
           <td>{{user.lastLoginTime | date:'medium'}}</td>
           <td>{{ groups(user) }}</td>
           <td><i ng-show="user.blocked" class="text-red fa-circle"></i></td>

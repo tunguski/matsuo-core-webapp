@@ -1,0 +1,31 @@
+<div ng-controller="UserCtrl">
+  <div id="form.users" class="search-pane">
+
+    <div simple-search query="query" />
+
+    <div class="row">
+      <div class="col-sm-6">
+        {{ user.person.firstName }} {{ user.person.lastName }}
+
+        <form class="form-horizontal">
+          <div class="form-group form_startDate">
+            <label class="col-sm-4 control-label" for="form.startDate" translate="form.startDate">Data od</label>
+
+            <div class="col-sm-8">
+              <div class="input-group">
+                <input class="startDate form-control" ng-datepicker ng-options="datepickerOptions" id="form.startDate"
+                       name="form_startDate" ng-model="form.startDate" placeholder="Data od" type="text">
+
+                <span class="input-group-addon">do</span>
+
+                <input class="input-size-date endDate form-control" ng-datepicker ng-options="datepickerOptions" id="form.endDate"
+                       name="form_endDate" ng-model="form.endDate" placeholder="Data do" type="text">
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
