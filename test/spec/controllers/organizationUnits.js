@@ -19,9 +19,7 @@ describe('Controller: ', function () {
   }));
 
   it('addOrganizationUnit', function () {
-    http.expectGET('/api/organizationUnits').respond([]);
     http.expectGET('views/organization/add_company.html').respond('<div></div>');
-    http.expectGET('/api/organizationUnits').respond([]);
 
     var modal = scope.addOrganizationUnit();
 
