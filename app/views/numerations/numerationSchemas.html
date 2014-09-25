@@ -1,0 +1,30 @@
+
+
+<div ng-controller="NumerationSchemasCtrl">
+
+      <h4>Lista schematów numeracji</h4>
+
+      <div simple-search query="query"></div>
+
+      <table class="table table-condensed table-hover table-striped input-table">
+        <thead>
+          <tr>
+            <th>Kod</th>
+            <th>Wzorzec</th>
+            <th>Aktualna wartość</th>
+            <th>Maksymalna wartość</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="numerationSchema in numerationSchemas | filter:query">
+            <td>{{numerationSchema.code}}</td>
+            <td class="monospace">{{numerationSchema.pattern}}</td>
+            <td>{{numerationSchema.value}}</td>
+            <td>{{numerationSchema.maxValue}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+

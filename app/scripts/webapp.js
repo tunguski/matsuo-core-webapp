@@ -20,6 +20,7 @@ angular.module('mt.webapp', ['mt.ui', 'easypiechart', 'anvde'])
             ]
           },
           { title: 'Firmy', href: '#/organization/organizationUnits' },
+          { title: 'Schematy numeracji', href: '#/numerations/numerationSchemas' },
           { title: 'Numeracje', href: '#/numerations/numerations' }
         ]
       });
@@ -37,6 +38,7 @@ angular.module('mt.webapp', ['mt.ui', 'easypiechart', 'anvde'])
           })
           .define('AccessLog')
           .define('Numeration')
+          .define('NumerationSchema')
           .define('Payer')
           .define('Person')
           .define('Print')

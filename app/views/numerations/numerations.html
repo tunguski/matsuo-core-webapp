@@ -11,6 +11,8 @@
           <tr>
             <th>Kod</th>
             <th>Wzorzec</th>
+            <th>Obowiązuje od</th>
+            <th>Obowiązuje do</th>
             <th>Aktualna wartość</th>
             <th>Maksymalna wartość</th>
           </tr>
@@ -20,6 +22,8 @@
           <tr ng-repeat="numeration in numerations | filter:query">
             <td>{{numeration.code}}</td>
             <td class="monospace">{{numeration.pattern}}</td>
+            <td>{{numeration.startDate}}</td>
+            <td>{{numeration.endDate}}</td>
             <td>{{numeration.value}}</td>
             <td>{{numeration.maxValue}}</td>
           </tr>
