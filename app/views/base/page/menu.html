@@ -18,7 +18,8 @@
             <span  translate="{{menuGroup.title}}"></span><b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-            <li ng-repeat="menuElement in menuGroup.elements" ng-class="!!menuElement.elements ? 'dropdown-submenu' : 'xxx'">
+            <li ng-repeat="menuElement in menuGroup.elements"
+                ng-class="!!menuElement.elements ? 'dropdown-submenu' : menuElement.divider ? 'divider' : 'xxx'">
               <a ng-href="{{menuElement.href}}" translate="{{menuElement.title}}"></a>
               <ul class="dropdown-menu" ng-if="menuElement.elements">
                 <li ng-repeat="subElement in menuElement.elements">

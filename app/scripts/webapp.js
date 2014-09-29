@@ -20,6 +20,7 @@ angular.module('mt.webapp', ['mt.ui', 'easypiechart', 'anvde'])
             ]
           },
           { title: 'Firmy', href: '#/organization/organizationUnits' },
+          { divider: true },
           { title: 'Schematy numeracji', href: '#/numerations/numerationSchemas' },
           { title: 'Numeracje', href: '#/numerations/numerations' }
         ]
