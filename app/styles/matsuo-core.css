@@ -9,6 +9,10 @@
   line-height: 100px;
 }
 
+.subhead h3 {
+  margin: 10px;
+}
+
 .login-panel .form-group {
   margin-top: 30px;
 }
