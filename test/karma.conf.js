@@ -29,7 +29,7 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-translate/angular-translate.js',
       'bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js',
-      'bower_components/angular-ui-select2/src/select2.js',
+      'bower_components/angular-ui-select/dist/select.js',
       'bower_components/anvde/dist/anvde.js',
 
       'bower_components/jquery.easy-pie-chart/dist/easypiechart.js',
