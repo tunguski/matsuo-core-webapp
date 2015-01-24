@@ -12,6 +12,6 @@ angular.module('mt.webapp')
 
       $scope.setTitle('Lista numeracji');
 
-      Numeration.query({}, scopeSetter($scope, 'numerations'));
+      Numeration.query({}, $scope.scopeSetter('numerations'));
     });
 

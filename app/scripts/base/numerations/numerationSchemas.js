@@ -12,6 +12,6 @@ angular.module('mt.webapp')
 
       $scope.setTitle('Lista schematów numeracji');
 
-      NumerationSchema.query({}, scopeSetter($scope, 'numerationSchemas'));
+      NumerationSchema.query({}, $scope.scopeSetter('numerationSchemas'));
     });
 

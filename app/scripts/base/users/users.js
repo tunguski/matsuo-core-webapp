@@ -12,7 +12,7 @@ angular.module('mt.webapp')
       $scope.setTitle('Zarządzanie użytkownikami');
 
       $scope.refreshListing = function() {
-        User.query({}, scopeSetter($scope, 'users'));
+        User.query({}, $scope.scopeSetter('users'));
       };
       $scope.refreshListing();
 
