@@ -5,6 +5,16 @@
 }
 
 
+/** Pozycjonowanie ikony ładowania na inpucie simple search */
+.simple-search-form .fa-spinner.fa-spin.form-control-feedback {
+  height: auto;
+  width: auto;
+  position: absolute;
+  right: 44px;
+  top: 9px;
+}
+
+
 body .modal.fullscreen {
   /* new custom width */
   width: 60%;
