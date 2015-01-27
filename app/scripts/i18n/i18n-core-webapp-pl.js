@@ -12,17 +12,25 @@ angular.module('mt.webapp')
         },
 
         entity: {
+          fullName: 'Full name',
+          shortName: 'Short name',
+          code: 'Code',
+          nip: 'ID number',
           username: 'Login',
           password: 'Hasło',
           person: {
             firstName: 'Imię',
             lastName: 'Nazwisko',
-            pesel: 'Pesel',
-            address: {
-              town: 'Miasto',
-              street: 'Ulica'
-            }
+            pesel: 'Pesel'
           }
+        },
+        address: {
+          town: 'Miasto',
+          street: 'Ulica',
+          zipCode: 'Kod pocztowy',
+          gmina: 'Gmina',
+          houseNumber: 'Nr domu',
+          apartmentNumber: 'Nr lokalu'
         }
 
       });
