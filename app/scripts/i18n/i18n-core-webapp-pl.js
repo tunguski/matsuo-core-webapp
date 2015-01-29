@@ -31,6 +31,10 @@ angular.module('mt.webapp')
           gmina: 'Gmina',
           houseNumber: 'Nr domu',
           apartmentNumber: 'Nr lokalu'
+        },
+
+        menu: {
+          searchPlaceholder: 'Wyszukaj'
         }
 
       });

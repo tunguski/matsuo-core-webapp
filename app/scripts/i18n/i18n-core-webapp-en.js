@@ -31,6 +31,10 @@ angular.module('mt.webapp')
           gmina: 'Community',
           houseNumber: 'House number',
           apartmentNumber: 'Apartment number'
+        },
+
+        menu: {
+          searchPlaceholder: 'Search'
         }
 
       });
