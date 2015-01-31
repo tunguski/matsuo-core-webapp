@@ -2,9 +2,7 @@
 
 angular.module('mt.webapp')
     .controller('UserCtrl', function ($scope, $routeParams, User) {
-      User.get({ idUser: $routeParams.idEntity }, function (user) {
-        $scope.user = user;
-      });
+      User.get({ idUser: $routeParams.idEntity }, $scope.scopeSetter('user'));
 
       $scope.datepickerOptions = {
         format: 'dd-mm-yyyy',
