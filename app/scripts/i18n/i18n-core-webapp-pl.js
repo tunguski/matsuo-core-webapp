@@ -12,10 +12,10 @@ angular.module('mt.webapp')
         },
 
         entity: {
-          fullName: 'Full name',
-          shortName: 'Short name',
-          code: 'Code',
-          nip: 'ID number',
+          fullName: 'Pełna nazwa',
+          shortName: 'Nazwa skrócona',
+          code: 'Kod',
+          nip: 'Nip',
           username: 'Login',
           password: 'Hasło',
           person: {
