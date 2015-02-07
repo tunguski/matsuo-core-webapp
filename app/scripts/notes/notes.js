@@ -34,7 +34,7 @@ angular.module('mt.webapp')
 
     $scope.changeStatus = function (status) {
       return function (id) {
-        $http.post('/api/notes/' + id + '/' + status).success(function(data) {
+        $http.post('/api/noteMessages/' + id + '/' + status).success(function(data) {
           $scope.loadNotes();
         });
       };

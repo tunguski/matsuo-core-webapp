@@ -20,13 +20,7 @@ angular.module('mt.webapp')
     $scope.tabs = organizationUnitTabs;
 
     $scope.refresh = function() {
-      OrganizationUnit.get({ idOrganizationUnit: $routeParams.idEntity }, function (organizationUnit) {
-        $scope.entity = organizationUnit;
-
-        $http.get('/api/organizationUnits/' + $routeParams.idEntity + '/employees').success(function (employees) {
-          $scope.employees = employees;
-        });
-      });
+      OrganizationUnit.get({ idOrganizationUnit: $routeParams.idEntity }, $scope.scopeSetter('entity'));
     };
     $scope.refresh();
 
@@ -109,8 +103,10 @@ angular.module('mt.webapp')
    * # OrganizationUnitInfoEmployeesTabCtrl
    * Controller of the mt.webapp
    */
-  .controller('OrganizationUnitInfoEmployeesTabCtrl', function ($scope) {
-
+  .controller('OrganizationUnitInfoEmployeesTabCtrl', function ($scope, $http) {
+    $scope.$watchNotFalse('entity', function (entity) {
+      $http.get('/api/organizationUnits/' + entity.id + '/employees').success($scope.scopeSetter('employees'));
+    });
   })
 
   /**

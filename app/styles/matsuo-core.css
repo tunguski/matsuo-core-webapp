@@ -645,3 +645,16 @@ footer .company-title {
 .nvtooltip h4 {
   margin: 5px;
 }
+
+.noteStatus-CLOSED .note-status {
+  color: red;
+}
+
+.note-btn {
+  margin-left: 5px;
+  margin-bottom: 25px;
+}
+
+.noteStatus-CANCELLED * {
+  color: #aaa;
+}
