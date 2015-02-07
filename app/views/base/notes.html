@@ -1,0 +1,34 @@
+<div ng-controller="NoteListController" id="note-list" class="notatki">
+
+  <div>
+    <a class="fa fa-plus-circle big-icon" ng-click="addNote()"></a>
+  </div>
+
+  <table class="table table-hover table-condensed table-striped">
+    <thead>
+      <tr>
+        <th>Data utworzenia</th>
+        <th>Treść</th>
+        <th ng-show="entity.showParty">Dotyczy</th>
+        <th>Piorytet</th>
+        <th>Status</th>
+        <th>Funkcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="{{'noteStatus-' + note.status}}" ng-repeat="note in messages">
+        <td>{{note.createdTime | formatDate}} {{note.createdTime |formatTime}}</td>
+        <td>{{note.text}}</td>
+        <td ng-show="entity.showParty"><a ng-href="/#/person/person_info/{{note.party.id}}">{{note.party.firstName + ' ' + note.party.lastName}}</a></td>
+        <td>{{"enum.NotePriority." + note.priority | translate}}</td>
+        <td class="note-status">{{"enum.NoteStatus." + note.status | translate}}</td>
+        <td>
+        <a ng-show="note.status=='OPEN'" class="fa fa-edit" ng-click="addNote(note)"></a>
+        <a ng-show="note.status=='OPEN'" class="fa fa-check" ng-click="close(note.id)"></a>
+        <a ng-show="note.status=='OPEN'" class="fa fa-times" ng-click="cancel(note.id)"></a>
+        <a ng-show="note.status!='OPEN'" class="fa fa-undo" ng-click="open(note.id)"></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

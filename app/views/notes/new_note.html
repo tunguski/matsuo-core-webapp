@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4>Dodaj notatkę</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+      <form name="form" class="form-horizontal" ng-submit="save()">
+        <div mt-form-part="noteMessage">
+          <div mt-form-field="priority"/>
+          <div mt-form-field="idParty"/>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Treść</label>
+          <div class="col-sm-8">
+            <textarea rows="5" ng-model="entity.text" class="textarea-note form-control"></textarea>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>
+<div class="modal-footer">
+  <a class="btn btn-default" ng-click="close()" translate="cancel"></a>
+  <a class="btn btn-primary" ng-click="save()" translate="save"></a>
+</div>

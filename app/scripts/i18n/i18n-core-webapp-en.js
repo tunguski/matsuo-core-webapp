@@ -17,7 +17,9 @@ angular.module('mt.webapp')
           code: 'Code',
           nip: 'ID number',
           username: 'Login',
-          password: 'Pasword',
+          password: 'Password',
+          priority: 'Priority',
+          idParty: 'Party',
           person: {
             firstName: 'First name',
             lastName: 'Last name',
@@ -35,6 +37,20 @@ angular.module('mt.webapp')
 
         menu: {
           searchPlaceholder: 'Search'
+        },
+
+        enum: {
+          NotePriority: {
+            IMPORTANT: 'Important',
+            WARNING: 'Warning',
+            INFO: 'Information'
+          },
+
+          NoteStatus:{
+            OPEN: 'Open',
+            CANCELLED: 'Cancelled',
+            CLOSED: 'Closed'
+          }
         }
 
       });

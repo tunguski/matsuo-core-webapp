@@ -18,6 +18,8 @@ angular.module('mt.webapp')
           nip: 'Nip',
           username: 'Login',
           password: 'Hasło',
+          priority: 'Priorytet',
+          idParty: 'Podmiot',
           person: {
             firstName: 'Imię',
             lastName: 'Nazwisko',
@@ -35,6 +37,20 @@ angular.module('mt.webapp')
 
         menu: {
           searchPlaceholder: 'Wyszukaj'
+        },
+
+        enum: {
+          NotePriority: {
+            IMPORTANT: 'Ważna',
+            WARNING: 'Ostrzeżenie',
+            INFO: 'Informacja'
+          },
+
+          NoteStatus:{
+            OPEN: 'Otwarta',
+            CANCELLED: 'Anulowana',
+            CLOSED: 'Zamknięta'
+          }
         }
 
       });
