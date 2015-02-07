@@ -16,7 +16,14 @@ angular.module('mt.webapp')
       $scope.smses = [];
       $scope.parties = [];
 
-    
+
+    $scope.idParty = {
+      options: {
+        url: '/api/party',
+        formatElement: simplePartyFormatResult,
+        bindId: true
+      }
+    };
       initializeSelect2($scope, "entity.idParty", "/api/party", "simpleParty", { bindId: true });
 
 

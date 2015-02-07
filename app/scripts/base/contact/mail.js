@@ -19,7 +19,13 @@ angular.module('mt.webapp')
       $scope.listPerson = [];
 
 
-      initializeSelect2($scope, "entity.idParty", "/api/persons", "person", { bindId: true });
+      $scope.idParty = {
+        options: {
+          url: '/api/persons',
+          formatElement: personFormatResult,
+          bindId: true
+        }
+      };
 
 
       $scope.tinymceOptions = {

@@ -93,7 +93,13 @@ angular.module('mt.webapp')
         }
       };
 
-      initializeSelect2($scope, 'entity.idPerson', '/api/persons', 'person', { bindEntity: 'entity' });
+      $scope.idPerson = {
+        options: {
+          url: '/api/persons',
+          //'person'
+          bindEntity: 'entity'
+        }
+      };
     })
 
     /**
