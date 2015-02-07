@@ -480,6 +480,10 @@ div.full {
   border-bottom-color: grey;
 }
 
+.table.input-table input[type='text'][disabled] {
+  border-bottom-color: transparent;
+}
+
 .table th.number,
 .table td.number,
 .table td.number input[type='text'] {
