@@ -249,7 +249,7 @@ input.ng-dirty.ng-invalid ~ span.ko { color:red; display:inline; }
   margin-left: 10px !important;
 }
 
-header h3 {
+header.subhead h3 {
   margin: 5px 0;
 }
 
