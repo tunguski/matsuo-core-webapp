@@ -457,11 +457,13 @@ div.full {
   text-align: left;
 }
 
-.table.input-table input {
+.table.input-table input[type='text'],
+.table.input-table input[type='number'] {
   width: 100%;
 }
 
-.table.input-table .number input {
+.table.input-table .number input[type='text'],
+.table.input-table .number input[type='number'] {
   width: 80%;
 }
 
@@ -470,7 +472,8 @@ div.full {
   width: 20px;
 }
 
-.table.input-table input[type='text'] {
+.table.input-table input[type='text'],
+.table.input-table input[type='number']{
   margin-top: -1px;
   margin-bottom: -5px;
   border-radius: 0;
@@ -486,7 +489,7 @@ div.full {
 
 .table th.number,
 .table td.number,
-.table td.number input[type='text'] {
+.table td.number input {
   white-space: nowrap;
   text-align: right;
 }

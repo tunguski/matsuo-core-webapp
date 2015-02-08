@@ -26,6 +26,7 @@
     "searchQueryFunction": false,
     "toastr": false,
     "lastUrlElement": false,
-    "initializeSelect2": false
+    "loadAndInject": false,
+    "partyFormatResult": false
   }
 }

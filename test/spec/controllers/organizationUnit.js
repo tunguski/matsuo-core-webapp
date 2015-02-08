@@ -36,13 +36,13 @@ describe('Controller: ', function () {
 
     it('removeEmployee', function () {
       $http.expectGET('/api/organizationUnits/7').respond({ id: 7 });
-      $http.expectGET('/api/organizationUnits/7/employees').respond([]);
+      //$http.expectGET('/api/organizationUnits/7/employees').respond([]);
 
       $http.flush();
 
       $http.expectDELETE('/api/organizationUnits/7/employee/11').respond('');
       $http.expectGET('/api/organizationUnits/7').respond({ id: 7 });
-      $http.expectGET('/api/organizationUnits/7/employees').respond([]);
+      //$http.expectGET('/api/organizationUnits/7/employees').respond([]);
 
       spyOn(toastr, 'success');
 
@@ -56,7 +56,7 @@ describe('Controller: ', function () {
 
     it('editCompany', function () {
       $http.expectGET('/api/organizationUnits/7').respond({ id: 7 });
-      $http.expectGET('/api/organizationUnits/7/employees').respond([]);
+      //$http.expectGET('/api/organizationUnits/7/employees').respond([]);
 
       $http.flush();
 
@@ -71,7 +71,7 @@ describe('Controller: ', function () {
       modal.close('OK');
 
       $http.expectGET('/api/organizationUnits/7').respond({ id: 7 });
-      $http.expectGET('/api/organizationUnits/7/employees').respond([]);
+      //$http.expectGET('/api/organizationUnits/7/employees').respond([]);
 
       $http.flush();
 
@@ -81,7 +81,7 @@ describe('Controller: ', function () {
 
     it('addEmployee', function () {
       $http.expectGET('/api/organizationUnits/7').respond({ id: 7 });
-      $http.expectGET('/api/organizationUnits/7/employees').respond([]);
+      //$http.expectGET('/api/organizationUnits/7/employees').respond([]);
 
       $http.flush();
 
@@ -100,7 +100,7 @@ describe('Controller: ', function () {
 
       $http.expectPOST('/api/organizationUnits/7/employee/11').respond('');
       $http.expectGET('/api/organizationUnits/7').respond({ id: 7 });
-      $http.expectGET('/api/organizationUnits/7/employees').respond([]);
+      //$http.expectGET('/api/organizationUnits/7/employees').respond([]);
 
       scope.$digest();
       $http.flush();

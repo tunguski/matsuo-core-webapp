@@ -1,4 +1,4 @@
-
+'use strict';
 
 angular.module('mt.webapp')
   .controller('NoteListController', function ($scope, $http, $dialog, Person, NoteMessage, SmsMessage, MailMessage) {
